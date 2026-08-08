@@ -372,6 +372,174 @@ Chat on WhatsApp
 </div>
 </section>
 
+  <section id="enquiry">
+  <div class="section-title">
+    <h2>Send an Enquiry</h2>
+    <p>Tell us what you need and we'll get back to you.</p>
+  </div>
+
+  <div class="enquiry-box">
+
+    <form onsubmit="sendEnquiry(event)">
+
+      <div class="form-row">
+        <div class="field">
+          <label>Your Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="field">
+          <label>Mobile Number</label>
+          <input type="tel" id="phone" placeholder="Enter mobile number" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Service Required</label>
+        <select id="service" required>
+          <option value="">Select a service</option>
+          <option>Graphic Designing</option>
+          <option>Digital Printing</option>
+          <option>Flex & Banner Printing</option>
+          <option>DTF T-Shirt Printing</option>
+          <option>Visiting Cards</option>
+          <option>Acrylic Products</option>
+          <option>Sunboard & Vinyl</option>
+          <option>Invitation Cards</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Quantity</label>
+        <input type="text" id="quantity" placeholder="Example: 100 cards">
+      </div>
+
+      <div class="field">
+        <label>Your Requirement</label>
+        <textarea id="message" rows="5" placeholder="Tell us about your requirement..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        💬 Send Enquiry on WhatsApp
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+<style>
+.enquiry-box{
+  max-width:750px;
+  margin:auto;
+  background:white;
+  padding:35px;
+  border-radius:24px;
+  border:1px solid #e8edf5;
+  box-shadow:0 15px 45px rgba(30,60,90,.07);
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.field{
+  margin-bottom:20px;
+}
+
+.field label{
+  display:block;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:8px;
+  color:#273247;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  padding:14px 15px;
+  border:1px solid #dce3ee;
+  border-radius:12px;
+  font-family:inherit;
+  font-size:14px;
+  outline:none;
+  background:#fbfdff;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:#155eef;
+  box-shadow:0 0 0 3px rgba(21,94,239,.08);
+}
+
+.submit-btn{
+  width:100%;
+  border:0;
+  padding:16px;
+  border-radius:12px;
+  background:#25D366;
+  color:white;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.submit-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(37,211,102,.25);
+}
+
+@media(max-width:650px){
+  .form-row{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .enquiry-box{
+    padding:22px;
+  }
+}
+</style>
+
+<script>
+function sendEnquiry(event){
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const service = document.getElementById("service").value;
+  const quantity = document.getElementById("quantity").value;
+  const message = document.getElementById("message").value;
+
+  const whatsappMessage =
+`Hello Onkar Graphics & Printing 👋
+
+I would like to enquire about your services.
+
+Name: ${name}
+Mobile: ${phone}
+Service: ${service}
+Quantity: ${quantity || "Not specified"}
+
+Requirement:
+${message || "Not specified"}
+
+Thank you.`;
+
+  const url =
+    "https://wa.me/919637822996?text=" +
+    encodeURIComponent(whatsappMessage);
+
+  window.open(url, "_blank");
+}
+</script>
 
 <section id="contact">
 <div class="section-title">
