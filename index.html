@@ -8,15 +8,29 @@
 <meta name="description" content="Onkar Graphics & Printing – Professional graphic designing and printing services in Dombivli.">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   font-family:Arial,Helvetica,sans-serif;
   color:#172033;
   background:#f8fbff;
   line-height:1.6;
 }
-a{text-decoration:none;color:inherit}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* HEADER */
 
 header{
   position:sticky;
@@ -26,6 +40,7 @@ header{
   backdrop-filter:blur(12px);
   border-bottom:1px solid #e8edf5;
 }
+
 .nav{
   max-width:1150px;
   margin:auto;
@@ -34,35 +49,46 @@ header{
   justify-content:space-between;
   align-items:center;
 }
+
 .logo{
   font-size:22px;
   font-weight:800;
   color:#155eef;
 }
-.logo span{color:#ef4b8b}
+
+.logo span{
+  color:#ef4b8b;
+}
 
 nav a{
   margin-left:25px;
   font-size:14px;
   font-weight:600;
 }
-nav a:hover{color:#155eef}
+
+nav a:hover{
+  color:#155eef;
+}
+
+/* HERO */
 
 .hero{
-    min-height:500px;
-    display:flex;
-    align-items:center;
+  min-height:500px;
+  display:flex;
+  align-items:center;
   background:
   radial-gradient(circle at 85% 20%,#ffd9e9 0,transparent 28%),
   radial-gradient(circle at 10% 80%,#d8edff 0,transparent 30%),
   linear-gradient(135deg,#ffffff,#f3f8ff);
 }
+
 .hero-inner{
   max-width:1150px;
   width:100%;
   margin:auto;
-  padding:90px 22px;
+  padding:70px 22px;
 }
+
 .badge{
   display:inline-block;
   padding:8px 15px;
@@ -73,6 +99,7 @@ nav a:hover{color:#155eef}
   font-weight:700;
   margin-bottom:20px;
 }
+
 .hero h1{
   max-width:800px;
   font-size:clamp(42px,7vw,76px);
@@ -80,261 +107,72 @@ nav a:hover{color:#155eef}
   letter-spacing:-3px;
   margin-bottom:25px;
 }
+
 .hero h1 span{
   background:linear-gradient(90deg,#155eef,#c93691);
   -webkit-background-clip:text;
   color:transparent;
 }
+
 .hero p{
   max-width:650px;
   font-size:19px;
   color:#657086;
   margin-bottom:32px;
 }
-.buttons{display:flex;gap:14px;flex-wrap:wrap}
+
+.buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
 .btn{
   padding:14px 23px;
   border-radius:12px;
   font-weight:700;
   display:inline-block;
 }
+
 .primary{
   background:#155eef;
   color:white;
   box-shadow:0 10px 25px rgba(21,94,239,.25);
 }
+
 .secondary{
   background:white;
   border:1px solid #dce3ee;
 }
-.btn:hover{transform:translateY(-2px)}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* SECTIONS */
 
 section{
   max-width:1150px;
   margin:auto;
-  padding:90px 22px;
+  padding:75px 22px;
 }
-.section-title{text-align:center;margin-bottom:45px}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
 .section-title h2{
   font-size:40px;
   letter-spacing:-1px;
 }
-.section-title p{color:#718096;margin-top:8px}
 
-.services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-.card{
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  border:1px solid #e8edf5;
-  transition:.3s;
-  box-shadow:0 8px 30px rgba(30,60,90,.04);
-}
-.card:hover{
-  transform:translateY(-7px);
-  box-shadow:0 20px 45px rgba(30,60,90,.1);
-}
-.icon{
-  width:52px;height:52px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:15px;
-  background:#edf4ff;
-  font-size:25px;
-  margin-bottom:20px;
-}
-.card h3{margin-bottom:8px}
-.card p{color:#718096;font-size:14px}
-
-.about{
-  background:#111827;
-  color:white;
-  max-width:none;
-}
-.about-inner{
-  max-width:1100px;
-  margin:auto;
-  padding:90px 22px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
-.about h2{font-size:44px;line-height:1.15}
-.about p{color:#c5ccda;margin-top:20px}
-.points{margin-top:25px}
-.points div{margin:12px 0}
-
-.cta{
-  background:linear-gradient(135deg,#155eef,#8d3fd9);
-  color:white;
-  border-radius:28px;
-  text-align:center;
-  padding:65px 25px;
-}
-.cta h2{font-size:42px}
-.cta p{margin:10px auto 25px;color:#e7eaff}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
-.contact-card{
-  background:white;
-  border:1px solid #e8edf5;
-  padding:30px;
-  border-radius:20px;
-}
-.contact-card h3{margin-bottom:12px}
-.contact-card p{color:#687386;margin:7px 0}
-
-footer{
-  background:#0b1220;
-  color:#b9c1cf;
-  text-align:center;
-  padding:30px 20px;
-}
-footer strong{color:white}
-
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:58px;height:58px;
-  border-radius:50%;
-  background:#25D366;
-  color:white;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:28px;
-  box-shadow:0 10px 25px rgba(37,211,102,.35);
-  z-index:999;
+.section-title p{
+  color:#718096;
+  margin-top:8px;
 }
 
-@media(max-width:800px){
-  nav{display:none}
-  .hero h1{font-size:48px;letter-spacing:-2px}
-  .hero{min-height:580px}
-  .services{grid-template-columns:1fr}
-  .about-inner,.contact-grid{grid-template-columns:1fr}
-  .about h2{font-size:36px}
-  section{padding:65px 20px}
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="nav">
-  <div class="logo">Onkar <span>Graphics & Printing</span></div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</div>
-</header>
-
-<main>
-
-<section class="hero" id="home">
-<div class="hero-inner">
-  <div class="badge">CREATIVE • PRINT • QUALITY</div>
-
-  <h1>
-    Your Vision.<br>
-    <span>Our Printing.</span>
-  </h1>
-
-  <p>
-    Professional graphic designing and printing solutions
-    for businesses, brands, events and special occasions.
-  </p>
-
-  <div class="buttons">
-   <a class="btn primary" href="#enquiry">
-Get a Quote
-</a>
-    <a class="btn secondary" href="#services">
-      Explore Services →
-    </a>
-  </div>
-</div>
-</section>
-
-  <!-- FEATURED PRODUCTS -->
-
-<section id="featured">
-
-  <div class="section-title">
-    <div class="badge">✨ FEATURED PRODUCTS</div>
-    <h2>Trending This Ganeshotsav</h2>
-    <p>Make your Ganpati celebration more special with our customised products.</p>
-  </div>
-
-  <div class="featured-grid">
-
-    <!-- Acrylic Hanging Badge -->
-    <div class="featured-card">
-
-     <div class="product-image">
-    <img src="acrylic-badge.jpg" alt="Premium Acrylic Hanging Badge">
-</div>
-
-      <div class="product-content">
-        <h3>Premium Acrylic Hanging Badges</h3>
-
-        <p>
-          Customised acrylic hanging badges with personalised
-          names and creative designs.
-        </p>
-
-        <a href="#enquiry" class="product-btn">
-          Enquire Now →
-        </a>
-      </div>
-
-    </div>
-
-
-    <!-- Ganpati Banner -->
-    <div class="featured-card">
-
-      <div class="product-image banner-placeholder">
-        <span>🪔</span>
-        <p>Ganpati Banner</p>
-      </div>
-
-      <div class="product-content">
-        <h3>Ganpati Banners & Backdrops</h3>
-
-        <p>
-          Creative Ganpati banners and backdrop designs
-          for your home, mandal and celebrations.
-        </p>
-
-        <a href="#enquiry" class="product-btn">
-          Enquire Now →
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<style>
+/* FEATURED PRODUCTS */
 
 #featured{
   background:#f8fbff;
@@ -362,34 +200,44 @@ Get a Quote
   box-shadow:0 20px 45px rgba(20,40,80,.12);
 }
 
+/* PRODUCT IMAGE */
+
 .product-image{
+  width:100%;
   height:280px;
+  overflow:hidden;
+  background:#f5f7fb;
   display:flex;
-  flex-direction:column;
   align-items:center;
   justify-content:center;
-  text-align:center;
 }
 
-.product-image span{
-  font-size:55px;
-  margin-bottom:10px;
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
 }
 
-.product-image p{
-  font-size:16px;
-  font-weight:700;
-}
-
-.acrylic-placeholder{
-  background:linear-gradient(135deg,#e9f6ff,#f9e9ff);
-  color:#155eef;
-}
+/* BANNER PLACEHOLDER */
 
 .banner-placeholder{
   background:linear-gradient(135deg,#fff0d9,#ffe3ed);
   color:#d43b68;
+  flex-direction:column;
 }
+
+.banner-placeholder span{
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+.banner-placeholder p{
+  font-size:16px;
+  font-weight:700;
+}
+
+/* PRODUCT CONTENT */
 
 .product-content{
   padding:28px;
@@ -420,187 +268,106 @@ Get a Quote
   background:#0d4dcc;
 }
 
-@media(max-width:700px){
+/* SERVICES */
 
-  .featured-grid{
-    grid-template-columns:1fr;
-  }
-
-  .product-image{
-    height:240px;
-    overflow:hidden;
-    background:#f5f5f5;
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    display:block;
+.card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  border:1px solid #e8edf5;
+  transition:.3s;
+  box-shadow:0 8px 30px rgba(30,60,90,.04);
 }
 
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 20px 45px rgba(30,60,90,.1);
 }
 
-</style>
+.icon{
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:15px;
+  background:#edf4ff;
+  font-size:25px;
+  margin-bottom:20px;
+}
 
-<section id="services">
-<div class="section-title">
-  <h2>Our Services</h2>
-  <p>Everything you need to make your brand stand out.</p>
-</div>
+.card h3{
+  margin-bottom:8px;
+}
 
-<div class="services">
+.card p{
+  color:#718096;
+  font-size:14px;
+}
 
-<div class="card">
-<div class="icon">🎨</div>
-<h3>Graphic Designing</h3>
-<p>Creative and professional designs for businesses, events and social media.</p>
-</div>
+/* ABOUT */
 
-<div class="card">
-<div class="icon">🖨️</div>
-<h3>Digital Printing</h3>
-<p>High-quality printing solutions with sharp colours and premium finishing.</p>
-</div>
+.about{
+  background:#111827;
+  color:white;
+  max-width:none;
+}
 
-<div class="card">
-<div class="icon">📢</div>
-<h3>Flex & Banner Printing</h3>
-<p>Eye-catching banners, flex prints and promotional materials.</p>
-</div>
+.about-inner{
+  max-width:1100px;
+  margin:auto;
+  padding:75px 22px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
 
-<div class="card">
-<div class="icon">👕</div>
-<h3>DTF T-Shirt Printing</h3>
-<p>Custom T-shirt printing for brands, events, teams and personal occasions.</p>
-</div>
+.about h2{
+  font-size:44px;
+  line-height:1.15;
+}
 
-<div class="card">
-<div class="icon">💳</div>
-<h3>Visiting Cards</h3>
-<p>Premium visiting cards designed to create a strong first impression.</p>
-</div>
+.about p{
+  color:#c5ccda;
+  margin-top:20px;
+}
 
-<div class="card">
-<div class="icon">✨</div>
-<h3>Acrylic Products</h3>
-<p>Custom acrylic badges, name plates and creative personalised products.</p>
-</div>
+.points{
+  margin-top:25px;
+}
 
-<div class="card">
-<div class="icon">🪧</div>
-<h3>Sunboard & Vinyl</h3>
-<p>Professional signage and promotional display solutions.</p>
-</div>
+.points div{
+  margin:12px 0;
+}
 
-<div class="card">
-<div class="icon">💌</div>
-<h3>Invitation Cards</h3>
-<p>Beautiful invitation designs for weddings, birthdays and special events.</p>
-</div>
+/* CTA */
 
-<div class="card">
-<div class="icon">📦</div>
-<h3>Custom Printing</h3>
-<p>Tell us what you need and we'll create a customised printing solution.</p>
-</div>
+.cta{
+  background:linear-gradient(135deg,#155eef,#8d3fd9);
+  color:white;
+  border-radius:28px;
+  text-align:center;
+  padding:65px 25px;
+}
 
-</div>
-</section>
+.cta h2{
+  font-size:42px;
+}
 
+.cta p{
+  margin:10px auto 25px;
+  color:#e7eaff;
+}
 
-<div class="about" id="about">
-<div class="about-inner">
+/* ENQUIRY */
 
-<div>
-<h2>Creative ideas.<br>Premium printing.</h2>
-<p>
-At Onkar Graphics & Printing, we combine creative design
-with quality printing to help businesses and individuals
-present themselves professionally.
-</p>
-</div>
-
-<div class="points">
-<div>✓ Premium Quality</div>
-<div>✓ Creative & Modern Designs</div>
-<div>✓ Custom Printing Solutions</div>
-<div>✓ Professional Service</div>
-<div>✓ Customer-Focused Approach</div>
-</div>
-
-</div>
-</div>
-
-
-<section>
-<div class="cta">
-<h2>Let's Create Something Amazing.</h2>
-<p>Have a design or printing requirement? Let's discuss your project.</p>
-<a class="btn secondary" href="https://wa.me/919637822996">
-Chat on WhatsApp
-</a>
-</div>
-</section>
-
-  <section id="enquiry">
-  <div class="section-title">
-    <h2>Send an Enquiry</h2>
-    <p>Tell us what you need and we'll get back to you.</p>
-  </div>
-
-  <div class="enquiry-box">
-
-    <form onsubmit="sendEnquiry(event)">
-
-      <div class="form-row">
-        <div class="field">
-          <label>Your Name</label>
-          <input type="text" id="name" placeholder="Enter your name" required>
-        </div>
-
-        <div class="field">
-          <label>Mobile Number</label>
-          <input type="tel" id="phone" placeholder="Enter mobile number" required>
-        </div>
-      </div>
-
-      <div class="field">
-        <label>Service Required</label>
-        <select id="service" required>
-          <option value="">Select a service</option>
-          <option>Graphic Designing</option>
-          <option>Digital Printing</option>
-          <option>Flex & Banner Printing</option>
-          <option>DTF T-Shirt Printing</option>
-          <option>Visiting Cards</option>
-          <option>Acrylic Products</option>
-          <option>Sunboard & Vinyl</option>
-          <option>Invitation Cards</option>
-          <option>Other</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label>Quantity</label>
-        <input type="text" id="quantity" placeholder="Example: 100 cards">
-      </div>
-
-      <div class="field">
-        <label>Your Requirement</label>
-        <textarea id="message" rows="5" placeholder="Tell us about your requirement..."></textarea>
-      </div>
-
-      <button type="submit" class="submit-btn">
-        💬 Send Enquiry on WhatsApp
-      </button>
-
-    </form>
-
-  </div>
-</section>
-
-<style>
 .enquiry-box{
   max-width:750px;
   margin:auto;
@@ -667,7 +434,100 @@ Chat on WhatsApp
   box-shadow:0 10px 25px rgba(37,211,102,.25);
 }
 
-@media(max-width:650px){
+/* CONTACT */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  background:white;
+  border:1px solid #e8edf5;
+  padding:30px;
+  border-radius:20px;
+}
+
+.contact-card h3{
+  margin-bottom:12px;
+}
+
+.contact-card p{
+  color:#687386;
+  margin:7px 0;
+}
+
+/* FOOTER */
+
+footer{
+  background:#0b1220;
+  color:#b9c1cf;
+  text-align:center;
+  padding:30px 20px;
+}
+
+footer strong{
+  color:white;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+  box-shadow:0 10px 25px rgba(37,211,102,.35);
+  z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    min-height:500px;
+  }
+
+  .hero h1{
+    font-size:48px;
+    letter-spacing:-2px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  .featured-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-inner,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about h2{
+    font-size:36px;
+  }
+
+  section{
+    padding:60px 20px;
+  }
+
   .form-row{
     grid-template-columns:1fr;
     gap:0;
@@ -676,18 +536,700 @@ Chat on WhatsApp
   .enquiry-box{
     padding:22px;
   }
+
+  .product-image{
+    height:240px;
+  }
 }
+
 </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="nav">
+
+  <div class="logo">
+    Onkar <span>Graphics & Printing</span>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#featured">Featured</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-inner">
+
+  <div class="badge">
+    CREATIVE • PRINT • QUALITY
+  </div>
+
+  <h1>
+    Your Vision.<br>
+    <span>Our Printing.</span>
+  </h1>
+
+  <p>
+    Professional graphic designing and printing solutions
+    for businesses, brands, events and special occasions.
+  </p>
+
+  <div class="buttons">
+
+    <a class="btn primary" href="#enquiry">
+      Get a Quote
+    </a>
+
+    <a class="btn secondary" href="#services">
+      Explore Services →
+    </a>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURED PRODUCTS -->
+
+<section id="featured">
+
+  <div class="section-title">
+
+    <div class="badge">
+      ✨ FEATURED PRODUCTS
+    </div>
+
+    <h2>
+      Trending This Ganeshotsav
+    </h2>
+
+    <p>
+      Make your Ganpati celebration more special with our customised products.
+    </p>
+
+  </div>
+
+
+  <div class="featured-grid">
+
+
+    <!-- ACRYLIC HANGING BADGE -->
+
+    <div class="featured-card">
+
+      <div class="product-image">
+
+        <img
+          src="acrylic-badge.jpg"
+          alt="Premium Acrylic Hanging Badge"
+        >
+
+      </div>
+
+      <div class="product-content">
+
+        <h3>
+          Premium Acrylic Hanging Badges
+        </h3>
+
+        <p>
+          Customised acrylic hanging badges with personalised
+          names and creative designs.
+        </p>
+
+        <a href="#enquiry" class="product-btn">
+          Enquire Now →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- GANPATI BANNER -->
+
+    <div class="featured-card">
+
+      <div class="product-image banner-placeholder">
+
+        <span>🪔</span>
+
+        <p>
+          Ganpati Banner
+        </p>
+
+      </div>
+
+      <div class="product-content">
+
+        <h3>
+          Ganpati Banners & Backdrops
+        </h3>
+
+        <p>
+          Creative Ganpati banners and backdrop designs
+          for your home, mandal and celebrations.
+        </p>
+
+        <a href="#enquiry" class="product-btn">
+          Enquire Now →
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="section-title">
+
+  <h2>
+    Our Services
+  </h2>
+
+  <p>
+    Everything you need to make your brand stand out.
+  </p>
+
+</div>
+
+
+<div class="services">
+
+
+<div class="card">
+
+<div class="icon">🎨</div>
+
+<h3>
+Graphic Designing
+</h3>
+
+<p>
+Creative and professional designs for businesses,
+events and social media.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🖨️</div>
+
+<h3>
+Digital Printing
+</h3>
+
+<p>
+High-quality printing solutions with sharp colours
+and premium finishing.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📢</div>
+
+<h3>
+Flex & Banner Printing
+</h3>
+
+<p>
+Eye-catching banners, flex prints and promotional materials.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">👕</div>
+
+<h3>
+DTF T-Shirt Printing
+</h3>
+
+<p>
+Custom T-shirt printing for brands, events,
+teams and personal occasions.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💳</div>
+
+<h3>
+Visiting Cards
+</h3>
+
+<p>
+Premium visiting cards designed to create
+a strong first impression.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">✨</div>
+
+<h3>
+Acrylic Products
+</h3>
+
+<p>
+Custom acrylic badges, name plates and creative
+personalised products.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🪧</div>
+
+<h3>
+Sunboard & Vinyl
+</h3>
+
+<p>
+Professional signage and promotional display solutions.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💌</div>
+
+<h3>
+Invitation Cards
+</h3>
+
+<p>
+Beautiful invitation designs for weddings,
+birthdays and special events.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📦</div>
+
+<h3>
+Custom Printing
+</h3>
+
+<p>
+Tell us what you need and we'll create
+a customised printing solution.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<div class="about" id="about">
+
+<div class="about-inner">
+
+<div>
+
+<h2>
+Creative ideas.<br>
+Premium printing.
+</h2>
+
+<p>
+At Onkar Graphics & Printing, we combine creative design
+with quality printing to help businesses and individuals
+present themselves professionally.
+</p>
+
+</div>
+
+
+<div class="points">
+
+<div>✓ Premium Quality</div>
+
+<div>✓ Creative & Modern Designs</div>
+
+<div>✓ Custom Printing Solutions</div>
+
+<div>✓ Professional Service</div>
+
+<div>✓ Customer-Focused Approach</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CTA -->
+
+<section>
+
+<div class="cta">
+
+<h2>
+Let's Create Something Amazing.
+</h2>
+
+<p>
+Have a design or printing requirement?
+Let's discuss your project.
+</p>
+
+<a
+  class="btn secondary"
+  href="https://wa.me/919637822996"
+  target="_blank"
+>
+Chat on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ENQUIRY -->
+
+<section id="enquiry">
+
+<div class="section-title">
+
+<h2>
+Send an Enquiry
+</h2>
+
+<p>
+Tell us what you need and we'll get back to you.
+</p>
+
+</div>
+
+
+<div class="enquiry-box">
+
+<form onsubmit="sendEnquiry(event)">
+
+
+<div class="form-row">
+
+
+<div class="field">
+
+<label>
+Your Name
+</label>
+
+<input
+  type="text"
+  id="name"
+  placeholder="Enter your name"
+  required
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Mobile Number
+</label>
+
+<input
+  type="tel"
+  id="phone"
+  placeholder="Enter mobile number"
+  required
+>
+
+</div>
+
+
+</div>
+
+
+<div class="field">
+
+<label>
+Service Required
+</label>
+
+<select id="service" required>
+
+<option value="">
+Select a service
+</option>
+
+<option>
+Premium Acrylic Hanging Badges
+</option>
+
+<option>
+Ganpati Banners & Backdrops
+</option>
+
+<option>
+Graphic Designing
+</option>
+
+<option>
+Digital Printing
+</option>
+
+<option>
+Flex & Banner Printing
+</option>
+
+<option>
+DTF T-Shirt Printing
+</option>
+
+<option>
+Visiting Cards
+</option>
+
+<option>
+Acrylic Products
+</option>
+
+<option>
+Sunboard & Vinyl
+</option>
+
+<option>
+Invitation Cards
+</option>
+
+<option>
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Quantity
+</label>
+
+<input
+  type="text"
+  id="quantity"
+  placeholder="Example: 100 cards"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Your Requirement
+</label>
+
+<textarea
+  id="message"
+  rows="5"
+  placeholder="Tell us about your requirement..."
+></textarea>
+
+</div>
+
+
+<button
+  type="submit"
+  class="submit-btn"
+>
+💬 Send Enquiry on WhatsApp
+</button>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-title">
+
+<h2>
+Get In Touch
+</h2>
+
+<p>
+We're ready to bring your ideas to life.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<h3>
+Contact
+</h3>
+
+<p>
+📱 <strong>+91 96378 22996</strong>
+</p>
+
+<p>
+📍 Dombivli, Maharashtra
+</p>
+
+<p>
+📧 onkargraphicsandprinting.in
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>
+Follow Us
+</h3>
+
+<p>
+Instagram:
+<strong>@onkargraphics_</strong>
+</p>
+
+<p>
+For enquiries, quotations and custom orders,
+contact us on WhatsApp.
+</p>
+
+<a
+  class="btn primary"
+  href="https://wa.me/919637822996"
+  target="_blank"
+>
+WhatsApp Us
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 <strong>Onkar Graphics & Printing</strong>.
+All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/919637822996"
+  target="_blank"
+  aria-label="WhatsApp"
+>
+💬
+</a>
+
+
+<!-- WHATSAPP ENQUIRY SCRIPT -->
 
 <script>
+
 function sendEnquiry(event){
+
   event.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const phone = document.getElementById("phone").value;
-  const service = document.getElementById("service").value;
-  const quantity = document.getElementById("quantity").value;
-  const message = document.getElementById("message").value;
+  const name =
+    document.getElementById("name").value;
+
+  const phone =
+    document.getElementById("phone").value;
+
+  const service =
+    document.getElementById("service").value;
+
+  const quantity =
+    document.getElementById("quantity").value;
+
+  const message =
+    document.getElementById("message").value;
+
 
   const whatsappMessage =
 `Hello Onkar Graphics & Printing 👋
@@ -704,48 +1246,17 @@ ${message || "Not specified"}
 
 Thank you.`;
 
+
   const url =
     "https://wa.me/919637822996?text=" +
     encodeURIComponent(whatsappMessage);
 
+
   window.open(url, "_blank");
+
 }
+
 </script>
-
-<section id="contact">
-<div class="section-title">
-<h2>Get In Touch</h2>
-<p>We're ready to bring your ideas to life.</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-<h3>Contact</h3>
-<p>📱 <strong>+91 96378 22996</strong></p>
-<p>📍 Dombivli, Maharashtra</p>
-<p>📧 onkargraphicsandprinting.in</p>
-</div>
-
-<div class="contact-card">
-<h3>Follow Us</h3>
-<p>Instagram: <strong>@onkargraphics_</strong></p>
-<p>For enquiries, quotations and custom orders, contact us on WhatsApp.</p>
-<a class="btn primary" href="https://wa.me/919637822996">
-WhatsApp Us
-</a>
-</div>
-
-</div>
-</section>
-
-</main>
-
-<footer>
-<p>© 2026 <strong>Onkar Graphics & Printing</strong>. All Rights Reserved.</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/919637822996" aria-label="WhatsApp">◉</a>
 
 </body>
 </html>
