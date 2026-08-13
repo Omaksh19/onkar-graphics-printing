@@ -770,12 +770,12 @@ footer strong{
 }
 
 
-/* ===== PREMIUM SCROLL ANIMATIONS ===== */
+/* ===== SAFE PREMIUM ANIMATIONS ===== */
 
-@keyframes fadeUp{
+@keyframes premiumFadeUp{
   from{
     opacity:0;
-    transform:translateY(28px);
+    transform:translateY(18px);
   }
   to{
     opacity:1;
@@ -783,89 +783,72 @@ footer strong{
   }
 }
 
-@keyframes softFade{
+@keyframes premiumFadeIn{
   from{opacity:0;}
   to{opacity:1;}
 }
 
-/* Hero entrance */
+/* Hero animation works on all modern desktop and mobile browsers */
 .hero .badge{
-  animation:fadeUp .7s ease both;
+  animation:premiumFadeUp .6s ease both;
 }
 
 .hero h1{
-  animation:fadeUp .8s ease .08s both;
+  animation:premiumFadeUp .7s ease .08s both;
 }
 
 .hero p{
-  animation:fadeUp .8s ease .16s both;
+  animation:premiumFadeUp .7s ease .16s both;
 }
 
 .hero .buttons{
-  animation:fadeUp .8s ease .24s both;
+  animation:premiumFadeUp .7s ease .24s both;
 }
 
-/* Smooth page sections */
-.featured-card,
-.card,
-.why-card,
-.stat-item,
-.contact-card,
-.enquiry-box,
-.cta{
-  opacity:0;
-  animation:fadeUp .7s ease both;
-  animation-timeline:view();
-  animation-range:entry 0% cover 28%;
-}
-
-/* Section headings */
-.section-title{
-  animation:softFade .7s ease both;
-  animation-timeline:view();
-  animation-range:entry 0% cover 25%;
-}
-
-/* Existing hover effects enhanced */
+/* Simple hover animations — no experimental CSS features */
 .featured-card,
 .card,
 .why-card,
 .contact-card{
-  will-change:transform;
+  transition:transform .25s ease, box-shadow .25s ease;
 }
 
 .featured-card:hover,
 .card:hover,
 .why-card:hover,
 .contact-card:hover{
-  transform:translateY(-7px);
+  transform:translateY(-6px);
 }
 
-/* Buttons */
 .btn,
 .product-btn,
 .submit-btn{
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    background .2s ease;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
 .btn:hover,
 .product-btn:hover,
 .submit-btn:hover{
-  transform:translateY(-3px);
+  transform:translateY(-2px);
 }
 
-/* Respect users who prefer reduced motion */
-@media (prefers-reduced-motion:reduce){
-  *,
-  *::before,
-  *::after{
-    animation-duration:.01ms !important;
-    animation-iteration-count:1 !important;
-    scroll-behavior:auto !important;
-    transition-duration:.01ms !important;
+/* Keep the website usable when motion is disabled */
+@media (prefers-reduced-motion: reduce){
+  .hero .badge,
+  .hero h1,
+  .hero p,
+  .hero .buttons{
+    animation:none;
+  }
+
+  .featured-card,
+  .card,
+  .why-card,
+  .contact-card,
+  .btn,
+  .product-btn,
+  .submit-btn{
+    transition:none;
   }
 }
 
