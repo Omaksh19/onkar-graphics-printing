@@ -553,6 +553,322 @@ footer strong{
   .about h2{font-size:31px}
 }
 
+
+
+.social-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+@media(max-width:650px){
+  .social-buttons{
+    flex-direction:column;
+  }
+
+  .social-buttons .btn{
+    width:100%;
+    text-align:center;
+  }
+}
+
+/* SOCIAL & LOCATION LINKS */
+.contact-card a[href*="instagram.com"]{color:#155eef;font-weight:700;}
+.contact-card a[href*="instagram.com"]:hover{text-decoration:underline;}
+
+/* ===== PREMIUM TRUST + WHY US DESIGN ===== */
+
+.trust-stats{
+  max-width:1150px;
+  margin:0 auto;
+  padding:18px 22px 10px;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  background:#111827;
+  border-radius:24px;
+  padding:24px;
+  box-shadow:0 18px 45px rgba(17,24,39,.10);
+}
+
+.stat-item{
+  text-align:center;
+  padding:12px 8px;
+  border-right:1px solid rgba(255,255,255,.12);
+}
+
+.stat-item:last-child{
+  border-right:0;
+}
+
+.stat-number{
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:-.5px;
+  color:#ffffff;
+}
+
+.stat-label{
+  margin-top:4px;
+  font-size:12px;
+  font-weight:600;
+  color:#bfc7d6;
+}
+
+.why-us{
+  padding-top:70px;
+  padding-bottom:75px;
+}
+
+.why-grid{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.why-card{
+  background:#ffffff;
+  border:1px solid #e8edf5;
+  border-radius:20px;
+  padding:25px 20px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(30,60,90,.05);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.why-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(30,60,90,.10);
+}
+
+.why-icon{
+  width:52px;
+  height:52px;
+  margin:0 auto 15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:#edf4ff;
+  font-size:24px;
+}
+
+.why-card h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.why-card p{
+  color:#718096;
+  font-size:13px;
+  line-height:1.6;
+}
+
+/* PREMIUM BUTTON MOTION */
+.btn,
+.product-btn,
+.submit-btn{
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.btn:hover,
+.product-btn:hover,
+.submit-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+  .trust-stats{
+    padding:10px 18px 0;
+  }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:0;
+    padding:12px 8px;
+    border-radius:20px;
+  }
+
+  .stat-item{
+    padding:16px 8px;
+    border-right:1px solid rgba(255,255,255,.12);
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+
+  .stat-item:nth-child(2),
+  .stat-item:nth-child(4){
+    border-right:0;
+  }
+
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4){
+    border-bottom:0;
+  }
+
+  .stat-number{
+    font-size:23px;
+  }
+
+  .stat-label{
+    font-size:11px;
+  }
+
+  .why-us{
+    padding-top:55px;
+    padding-bottom:60px;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .why-card{
+    display:grid;
+    grid-template-columns:52px 1fr;
+    column-gap:15px;
+    text-align:left;
+    align-items:center;
+    padding:19px;
+  }
+
+  .why-icon{
+    grid-row:span 2;
+    margin:0;
+  }
+
+  .why-card h3{
+    margin:0 0 4px;
+  }
+
+  .why-card p{
+    margin:0;
+  }
+}
+
+@media(max-width:400px){
+
+  .stats-grid{
+    border-radius:18px;
+  }
+
+  .stat-number{
+    font-size:21px;
+  }
+
+  .why-card{
+    padding:17px;
+  }
+}
+
+
+/* ===== PREMIUM SCROLL ANIMATIONS ===== */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(28px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes softFade{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+/* Hero entrance */
+.hero .badge{
+  animation:fadeUp .7s ease both;
+}
+
+.hero h1{
+  animation:fadeUp .8s ease .08s both;
+}
+
+.hero p{
+  animation:fadeUp .8s ease .16s both;
+}
+
+.hero .buttons{
+  animation:fadeUp .8s ease .24s both;
+}
+
+/* Smooth page sections */
+.featured-card,
+.card,
+.why-card,
+.stat-item,
+.contact-card,
+.enquiry-box,
+.cta{
+  opacity:0;
+  animation:fadeUp .7s ease both;
+  animation-timeline:view();
+  animation-range:entry 0% cover 28%;
+}
+
+/* Section headings */
+.section-title{
+  animation:softFade .7s ease both;
+  animation-timeline:view();
+  animation-range:entry 0% cover 25%;
+}
+
+/* Existing hover effects enhanced */
+.featured-card,
+.card,
+.why-card,
+.contact-card{
+  will-change:transform;
+}
+
+.featured-card:hover,
+.card:hover,
+.why-card:hover,
+.contact-card:hover{
+  transform:translateY(-7px);
+}
+
+/* Buttons */
+.btn,
+.product-btn,
+.submit-btn{
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+.btn:hover,
+.product-btn:hover,
+.submit-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+  }
+}
+
 </style>
 </head>
 
@@ -572,6 +888,7 @@ footer strong{
     <a href="#home">Home</a>
     <a href="#featured">Featured</a>
     <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -715,6 +1032,63 @@ footer strong{
 
 </section>
 
+
+<!-- TRUST STATS -->
+<section class="trust-stats" aria-label="Business highlights">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-number">5,000+</div>
+      <div class="stat-label">Happy Customers</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Customised Work</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">Fast</div>
+      <div class="stat-label">Customer Response</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">Premium</div>
+      <div class="stat-label">Print Quality</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-us" id="why-us">
+  <div class="section-title">
+    <div class="badge">WHY CHOOSE US</div>
+    <h2>Made with creativity.<br>Delivered with quality.</h2>
+    <p>Professional design and printing solutions for every requirement.</p>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">✨</div>
+      <h3>Premium Quality</h3>
+      <p>Clean designs, sharp printing and quality-focused finishing.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">🎨</div>
+      <h3>Creative Designs</h3>
+      <p>Modern and customised designs made around your requirement.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
+      <h3>Quick Response</h3>
+      <p>Easy communication and fast response for enquiries and orders.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon">🤝</div>
+      <h3>Customer Focused</h3>
+      <p>We understand your requirement and help you choose the right solution.</p>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICES -->
 
@@ -1151,6 +1525,9 @@ Contact
 <p>
 📍 Dombivli, Maharashtra
 </p>
+<a class="btn secondary" href="https://maps.app.goo.gl/YAqwRjnwKxWoABvs9" target="_blank" rel="noopener" style="margin-top:10px;">
+  📍 View on Google Maps
+</a>
 
 <p>
 📧 onkargraphicsandprinting.in
@@ -1167,13 +1544,15 @@ Follow Us
 
 <p>
 Instagram:
-<strong>@onkargraphics_</strong>
+<strong><a href="https://www.instagram.com/onkargraphics_/" target="_blank" rel="noopener">@onkargraphics_</a></strong>
 </p>
 
 <p>
 For enquiries, quotations and custom orders,
 contact us on WhatsApp.
 </p>
+
+<div class="social-buttons">
 
 <a
   class="btn primary"
@@ -1182,6 +1561,17 @@ contact us on WhatsApp.
 >
 WhatsApp Us
 </a>
+
+<a
+  class="btn secondary"
+  href="https://www.instagram.com/onkargraphics_/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+Instagram ↗
+</a>
+
+</div>
 
 </div>
 
