@@ -769,6 +769,37 @@ footer strong{
   }
 }
 
+
+/* ===== ONKAR ORDER CHATBOT ===== */
+#ogChatButton{
+  position:fixed;right:22px;bottom:92px;width:58px;height:58px;border:0;
+  border-radius:50%;background:#111827;color:#fff;font-size:25px;cursor:pointer;
+  box-shadow:0 12px 30px rgba(17,24,39,.25);z-index:5000;
+}
+#ogChatBox{
+  display:none;position:fixed;right:22px;bottom:162px;width:370px;max-width:calc(100vw - 28px);
+  height:570px;background:#fff;border:1px solid #e5e7eb;border-radius:22px;
+  overflow:hidden;box-shadow:0 20px 60px rgba(17,24,39,.25);z-index:4999;
+}
+.og-chat-head{background:#111827;color:#fff;padding:18px 18px 15px}
+.og-chat-head strong{display:block;font-size:16px}.og-chat-head small{opacity:.72}
+#ogMessages{height:405px;overflow:auto;padding:15px;background:#f5f7fb}
+.og-msg{max-width:88%;padding:10px 13px;margin:0 0 10px;border-radius:14px;font-size:14px;line-height:1.5}
+.og-bot{background:#fff;border:1px solid #e8edf5;border-top-left-radius:5px}
+.og-user{background:#155eef;color:#fff;margin-left:auto;border-top-right-radius:5px}
+#ogOptions{padding:9px 11px;background:#fff;max-height:105px;overflow:auto}
+.og-option{width:100%;padding:9px 11px;margin:3px 0;border:1px solid #155eef;background:#fff;color:#155eef;
+border-radius:9px;font-weight:700;cursor:pointer;font-size:13px}
+.og-option:hover{background:#155eef;color:#fff}
+#ogInputArea{display:flex;padding:9px;border-top:1px solid #e8edf5;background:#fff}
+#ogInput{flex:1;border:1px solid #dce3ee;border-radius:9px;padding:10px;outline:0;font-size:14px}
+#ogSend{margin-left:7px;border:0;background:#155eef;color:#fff;border-radius:9px;padding:0 14px;cursor:pointer}
+@media(max-width:600px){
+  #ogChatBox{right:10px;bottom:82px;width:calc(100vw - 20px);height:calc(100vh - 105px);max-height:620px}
+  #ogMessages{height:calc(100% - 150px)}
+  #ogChatButton{right:16px;bottom:82px}
+}
+
 </style>
 </head>
 
@@ -1496,6 +1527,23 @@ All Rights Reserved.
 </footer>
 
 
+
+<!-- ONKAR GRAPHICS ORDER CHATBOT -->
+<button id="ogChatButton" onclick="ogToggleChat()" aria-label="Order Chatbot">🤖</button>
+
+<div id="ogChatBox">
+  <div class="og-chat-head">
+    <strong>ONKAR GRAPHICS & PRINTING</strong>
+    <small>Custom T-Shirt & Badge Orders</small>
+  </div>
+  <div id="ogMessages"></div>
+  <div id="ogOptions"></div>
+  <div id="ogInputArea">
+    <input id="ogInput" type="text" placeholder="Type your answer..." autocomplete="off">
+    <button id="ogSend" onclick="ogSendAnswer()">➤</button>
+  </div>
+</div>
+
 <!-- FLOATING WHATSAPP -->
 
 <a
@@ -1507,6 +1555,148 @@ All Rights Reserved.
 💬
 </a>
 
+
+
+<script>
+/* ===== ONKAR ORDER CHATBOT ===== */
+const OG_WA = "919637822996";
+let ogProduct = "", ogStep = 0, ogOrder = {}, ogQuestions = [];
+
+const OG_TSHIRT = [
+  ["👕 T-Shirt वर काय Design / Text हवं आहे?", "text"],
+  ["🎨 T-Shirt Colour कोणता हवा?", "text"],
+  ["📏 T-Shirt Size कोणता?", ["S","M","L","XL","XXL","Other"]],
+  ["🔢 किती Pieces हवेत?", "text"],
+  ["🖼️ तुमच्याकडे Design आहे का?", ["Yes","No"]],
+  ["👤 तुमचं नाव काय?", "text"],
+  ["📱 Mobile Number?", "text"],
+  ["🚚 Delivery की Pickup?", ["Delivery","Pickup"]]
+];
+
+const OG_BADGE = [
+  ["🎖️ Badge वर नाव (मराठीत) काय हवं आहे?", "text"],
+  ["📏 Badge Size किती?", "text"],
+  ["🪔 मूर्ती Size किती?", "text"],
+  ["📿 Chain की Rudraksh?", ["Chain","Rudraksh"]],
+  ["⬛ Background — Black की White?", ["Black","White"]],
+  ["🔢 किती Badges हवेत?", "text"],
+  ["👤 तुमचं नाव काय?", "text"],
+  ["📱 Mobile Number?", "text"],
+  ["🚚 Delivery की Pickup?", ["Delivery","Pickup"]]
+];
+
+function ogToggleChat(){
+  const box=document.getElementById("ogChatBox");
+  if(box.style.display==="block"){box.style.display="none";return;}
+  box.style.display="block";
+  if(!document.getElementById("ogMessages").innerHTML) ogStart();
+}
+
+function ogStart(){
+  ogProduct=""; ogStep=0; ogOrder={};
+  ogBot("नमस्कार! 🙏<br><br><b>ONKAR GRAPHICS & PRINTING</b> मध्ये आपले स्वागत आहे!<br><br>तुम्हाला काय Order करायचे आहे?");
+  ogOptions(["👕 Custom T-Shirt","🎖️ Custom Badge"]);
+}
+
+function ogBot(t){
+  const d=document.createElement("div"); d.className="og-msg og-bot"; d.innerHTML=t;
+  document.getElementById("ogMessages").appendChild(d); ogScroll();
+}
+function ogUser(t){
+  const d=document.createElement("div"); d.className="og-msg og-user"; d.textContent=t;
+  document.getElementById("ogMessages").appendChild(d); ogScroll();
+}
+function ogScroll(){
+  const m=document.getElementById("ogMessages"); m.scrollTop=m.scrollHeight;
+}
+function ogOptions(arr){
+  const box=document.getElementById("ogOptions"); box.innerHTML="";
+  arr.forEach(x=>{
+    const b=document.createElement("button"); b.className="og-option"; b.textContent=x;
+    b.onclick=()=>{ogUser(x); box.innerHTML=""; ogHandle(x);};
+    box.appendChild(b);
+  });
+}
+function ogHandle(x){
+  if(x.includes("T-Shirt")){ogProduct="T-Shirt";ogQuestions=OG_TSHIRT;ogStep=0;ogAsk();}
+  else if(x.includes("Badge")){ogProduct="Badge";ogQuestions=OG_BADGE;ogStep=0;ogAsk();}
+  else ogSave(x);
+}
+function ogAsk(){
+  const q=ogQuestions[ogStep];
+  ogBot(q[0]);
+  if(Array.isArray(q[1])) ogOptions(q[1]);
+}
+function ogSendAnswer(){
+  const input=document.getElementById("ogInput"), a=input.value.trim();
+  if(!a)return;
+  input.value=""; ogUser(a); ogSave(a);
+}
+function ogSave(a){
+  ogOrder[ogStep]=a; ogStep++;
+  if(ogStep<ogQuestions.length) setTimeout(ogAsk,220);
+  else if(ogProduct==="Badge" && ogOrder[8]==="Delivery") ogAskDelivery();
+  else if(ogProduct==="T-Shirt" && ogOrder[7]==="Delivery") ogAskDelivery();
+  else ogFinish();
+}
+function ogAskDelivery(){
+  ogOrder.deliveryAsked=true;
+  ogBot("🚚 Delivery साठी पूर्ण Address + Pincode पाठवा.");
+  ogStep++;
+}
+function ogFinishDelivery(a){ogOrder.address=a;ogFinish();}
+
+function ogFinish(){
+  if(ogOrder.deliveryAsked && !ogOrder.address){
+    const input=document.getElementById("ogInput");
+    if(!input.dataset.deliveryBound){
+      input.dataset.deliveryBound="1";
+      const old=window.ogSendAnswer;
+      window.ogSendAnswer=function(){
+        const v=input.value.trim(); if(!v)return;
+        input.value=""; ogUser(v); ogFinishDelivery(v);
+      };
+    }
+    return;
+  }
+
+  let s=ogProduct==="T-Shirt"
+    ? `<b>👕 T-Shirt Order Summary</b><br><br>
+       🎨 Design/Text: ${ogSafe(ogOrder[0])}<br>🎨 Colour: ${ogSafe(ogOrder[1])}<br>
+       📏 Size: ${ogSafe(ogOrder[2])}<br>🔢 Quantity: ${ogSafe(ogOrder[3])}<br>
+       🖼️ Design Available: ${ogSafe(ogOrder[4])}<br>👤 Name: ${ogSafe(ogOrder[5])}<br>
+       📱 Mobile: ${ogSafe(ogOrder[6])}<br>🚚 ${ogSafe(ogOrder[7])}`
+    : `<b>🎖️ Badge Order Summary</b><br><br>
+       📝 Badge Name: ${ogSafe(ogOrder[0])}<br>📏 Badge Size: ${ogSafe(ogOrder[1])}<br>
+       🪔 Murti Size: ${ogSafe(ogOrder[2])}<br>📿 Chain/Rudraksh: ${ogSafe(ogOrder[3])}<br>
+       ⬛ Background: ${ogSafe(ogOrder[4])}<br>🔢 Quantity: ${ogSafe(ogOrder[5])}<br>
+       👤 Name: ${ogSafe(ogOrder[6])}<br>📱 Mobile: ${ogSafe(ogOrder[7])}<br>🚚 ${ogSafe(ogOrder[8])}`;
+
+  if(ogOrder.address) s += `<br>📍 Address: ${ogSafe(ogOrder.address)}`;
+  ogBot("✅ <b>तुमची Order Details तयार आहेत!</b><br><br>"+s+"<br><br>Order WhatsApp वर पाठवण्यासाठी खालील button दाबा 👇");
+  ogOptions(["📲 Send Order on WhatsApp","🔄 New Order"]);
+  const ob=document.getElementById("ogOptions").children;
+  ob[0].onclick=ogSendWA;
+  ob[1].onclick=ogNewOrder;
+}
+function ogSafe(v){return String(v||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));}
+function ogSendWA(){
+  let lines=ogProduct==="T-Shirt"
+    ? ["👕 CUSTOM T-SHIRT ORDER","",`🎨 Design/Text: ${ogOrder[0]}`,`🎨 Colour: ${ogOrder[1]}`,`📏 Size: ${ogOrder[2]}`,`🔢 Quantity: ${ogOrder[3]}`,`🖼️ Design Available: ${ogOrder[4]}`,`👤 Name: ${ogOrder[5]}`,`📱 Mobile: ${ogOrder[6]}`,`🚚 Delivery/Pickup: ${ogOrder[7]}`]
+    : ["🎖️ CUSTOM BADGE ORDER","",`📝 Badge Name: ${ogOrder[0]}`,`📏 Badge Size: ${ogOrder[1]}`,`🪔 Murti Size: ${ogOrder[2]}`,`📿 Chain/Rudraksh: ${ogOrder[3]}`,`⬛ Background: ${ogOrder[4]}`,`🔢 Quantity: ${ogOrder[5]}`,`👤 Name: ${ogOrder[6]}`,`📱 Mobile: ${ogOrder[7]}`,`🚚 Delivery/Pickup: ${ogOrder[8]}`];
+  if(ogOrder.address) lines.push(`📍 Delivery Address: ${ogOrder.address}`);
+  window.open("https://wa.me/"+OG_WA+"?text="+encodeURIComponent(lines.join("\n")),"_blank");
+}
+function ogNewOrder(){
+  document.getElementById("ogMessages").innerHTML="";
+  document.getElementById("ogOptions").innerHTML="";
+  const input=document.getElementById("ogInput"); input.dataset.deliveryBound="";
+  window.ogSendAnswer=ogSendAnswer; ogStart();
+}
+document.addEventListener("keydown",e=>{
+  if(e.key==="Enter" && document.activeElement.id==="ogInput") ogSendAnswer();
+});
+</script>
 
 <!-- WHATSAPP ENQUIRY SCRIPT -->
 
