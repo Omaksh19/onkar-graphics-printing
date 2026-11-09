@@ -2,1771 +2,1591 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#155eef">
 
-<title>Onkar Graphics & Printing | Dombivli</title>
-<meta name="description" content="Onkar Graphics & Printing – Professional graphic designing and printing services in Dombivli.">
+<title>Onkar Graphics & Printing | Custom Printing in Dombivli</title>
+<meta name="description" content="Graphic designing, digital printing, visiting cards, banners, custom T-shirts and acrylic products in Dombivli. Contact Onkar Graphics & Printing for a quote.">
+<link rel="canonical" href="https://onkargraphicsandprinting.in/">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* ===== BASE ===== */
+:root{
+  --blue:#155eef;
+  --blue-dark:#1045b5;
+  --pink:#c93691;
+  --ink:#172033;
+  --muted:#526176;
+  --line:#e1e8f2;
+  --bg:#f7f9fd;
+  --green:#147a3b;
+  --radius:22px;
+  --shadow:0 14px 40px rgba(23,32,51,.07);
 }
 
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:105px}
 body{
   font-family:Arial,Helvetica,sans-serif;
-  color:#172033;
-  background:#f8fbff;
-  line-height:1.6;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.65;
 }
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-/* HEADER */
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid #e8edf5;
-}
-
-.nav{
-  max-width:1150px;
-  margin:auto;
-  padding:18px 22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.logo{
-  font-size:22px;
-  font-weight:800;
-  color:#155eef;
-}
-
-.logo span{
-  color:#ef4b8b;
-}
-
-nav a{
-  margin-left:25px;
-  font-size:14px;
-  font-weight:600;
-}
-
-nav a:hover{
-  color:#155eef;
-}
-
-/* HERO */
-
-.hero{
-  min-height:500px;
-  display:flex;
-  align-items:center;
-  background:
-  radial-gradient(circle at 85% 20%,#ffd9e9 0,transparent 28%),
-  radial-gradient(circle at 10% 80%,#d8edff 0,transparent 30%),
-  linear-gradient(135deg,#ffffff,#f3f8ff);
-}
-
-.hero-inner{
-  max-width:1150px;
-  width:100%;
-  margin:auto;
-  padding:70px 22px;
-}
-
-.badge{
-  display:inline-block;
-  padding:8px 15px;
-  background:#eaf2ff;
-  color:#155eef;
-  border-radius:30px;
-  font-size:13px;
-  font-weight:700;
-  margin-bottom:20px;
-}
-
-.hero h1{
-  max-width:800px;
-  font-size:clamp(42px,7vw,76px);
-  line-height:1.05;
-  letter-spacing:-3px;
-  margin-bottom:25px;
-}
-
-.hero h1 span{
-  background:linear-gradient(90deg,#155eef,#c93691);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-.hero p{
-  max-width:650px;
-  font-size:19px;
-  color:#657086;
-  margin-bottom:32px;
-}
-
-.buttons{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  padding:14px 23px;
-  border-radius:12px;
-  font-weight:700;
-  display:inline-block;
-}
-
-.primary{
-  background:#155eef;
-  color:white;
-  box-shadow:0 10px 25px rgba(21,94,239,.25);
-}
-
-.secondary{
-  background:white;
-  border:1px solid #dce3ee;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-/* SECTIONS */
-
-section{
-  max-width:1150px;
-  margin:auto;
-  padding:75px 22px;
-}
-
-.section-title{
-  text-align:center;
-  margin-bottom:40px;
-}
-
-.section-title h2{
-  font-size:40px;
+button,input,select,textarea{font:inherit}
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer}
+img{display:block;max-width:100%}
+section[id]{scroll-margin-top:105px}
+.container{width:min(1150px,calc(100% - 40px));margin:auto}
+.section{padding:78px 0}
+.section-heading{text-align:center;max-width:740px;margin:0 auto 36px}
+.section-heading h2{
+  font-size:clamp(28px,4vw,42px);
+  line-height:1.18;
   letter-spacing:-1px;
-}
-
-.section-title p{
-  color:#718096;
-  margin-top:8px;
-}
-
-/* FEATURED PRODUCTS */
-
-#featured{
-  background:#f8fbff;
-}
-
-.featured-grid{
-  max-width:1000px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:28px;
-}
-
-.featured-card{
-  background:white;
-  border-radius:24px;
-  overflow:hidden;
-  border:1px solid #e6ebf3;
-  box-shadow:0 12px 35px rgba(20,40,80,.07);
-  transition:.3s;
-}
-
-.featured-card:hover{
-  transform:translateY(-7px);
-  box-shadow:0 20px 45px rgba(20,40,80,.12);
-}
-
-/* PRODUCT IMAGE */
-
-.product-image{
-  width:100%;
-  height:280px;
-  overflow:hidden;
-  background:#f5f7fb;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.product-image img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-}
-
-/* BANNER PLACEHOLDER */
-
-.banner-placeholder{
-  background:linear-gradient(135deg,#fff0d9,#ffe3ed);
-  color:#d43b68;
-  flex-direction:column;
-}
-
-.banner-placeholder span{
-  font-size:55px;
-  margin-bottom:10px;
-}
-
-.banner-placeholder p{
-  font-size:16px;
-  font-weight:700;
-}
-
-/* PRODUCT CONTENT */
-
-.product-content{
-  padding:28px;
-}
-
-.product-content h3{
-  font-size:23px;
-  margin-bottom:10px;
-}
-
-.product-content p{
-  color:#687386;
-  font-size:14px;
-  margin-bottom:20px;
-}
-
-.product-btn{
-  display:inline-block;
-  background:#155eef;
-  color:white;
-  padding:12px 18px;
-  border-radius:10px;
-  font-weight:700;
-  font-size:14px;
-}
-
-.product-btn:hover{
-  background:#0d4dcc;
-}
-
-/* SERVICES */
-
-.services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.card{
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  border:1px solid #e8edf5;
-  transition:.3s;
-  box-shadow:0 8px 30px rgba(30,60,90,.04);
-}
-
-.card:hover{
-  transform:translateY(-7px);
-  box-shadow:0 20px 45px rgba(30,60,90,.1);
-}
-
-.icon{
-  width:52px;
-  height:52px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:15px;
-  background:#edf4ff;
-  font-size:25px;
-  margin-bottom:20px;
-}
-
-.card h3{
-  margin-bottom:8px;
-}
-
-.card p{
-  color:#718096;
-  font-size:14px;
-}
-
-/* ABOUT */
-
-.about{
-  background:#111827;
-  color:white;
-  max-width:none;
-}
-
-.about-inner{
-  max-width:1100px;
-  margin:auto;
-  padding:75px 22px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
-
-.about h2{
-  font-size:44px;
-  line-height:1.15;
-}
-
-.about p{
-  color:#c5ccda;
-  margin-top:20px;
-}
-
-.points{
-  margin-top:25px;
-}
-
-.points div{
-  margin:12px 0;
-}
-
-/* CTA */
-
-.cta{
-  background:linear-gradient(135deg,#155eef,#8d3fd9);
-  color:white;
-  border-radius:28px;
-  text-align:center;
-  padding:65px 25px;
-}
-
-.cta h2{
-  font-size:42px;
-}
-
-.cta p{
-  margin:10px auto 25px;
-  color:#e7eaff;
-}
-
-/* ENQUIRY */
-
-.enquiry-box{
-  max-width:750px;
-  margin:auto;
-  background:white;
-  padding:35px;
-  border-radius:24px;
-  border:1px solid #e8edf5;
-  box-shadow:0 15px 45px rgba(30,60,90,.07);
-}
-
-.form-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.field{
-  margin-bottom:20px;
-}
-
-.field label{
-  display:block;
-  font-size:14px;
-  font-weight:700;
-  margin-bottom:8px;
-  color:#273247;
-}
-
-.field input,
-.field select,
-.field textarea{
-  width:100%;
-  padding:14px 15px;
-  border:1px solid #dce3ee;
-  border-radius:12px;
-  font-family:inherit;
-  font-size:14px;
-  outline:none;
-  background:#fbfdff;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-  border-color:#155eef;
-  box-shadow:0 0 0 3px rgba(21,94,239,.08);
-}
-
-.submit-btn{
-  width:100%;
-  border:0;
-  padding:16px;
-  border-radius:12px;
-  background:#25D366;
-  color:white;
-  font-size:16px;
-  font-weight:700;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.submit-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 25px rgba(37,211,102,.25);
-}
-
-/* CONTACT */
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
-
-.contact-card{
-  background:white;
-  border:1px solid #e8edf5;
-  padding:30px;
-  border-radius:20px;
-}
-
-.contact-card h3{
   margin-bottom:12px;
 }
-
-.contact-card p{
-  color:#687386;
-  margin:7px 0;
-}
-
-/* FOOTER */
-
-footer{
-  background:#0b1220;
-  color:#b9c1cf;
-  text-align:center;
-  padding:30px 20px;
-}
-
-footer strong{
-  color:white;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#25D366;
-  color:white;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:28px;
-  box-shadow:0 10px 25px rgba(37,211,102,.35);
-  z-index:999;
-}
-
-/* MOBILE */
-
-/* ===== PREMIUM RESPONSIVE DESIGN ===== */
-@media (max-width:800px){
-  body{overflow-x:hidden}
-  .nav{padding:14px 18px}
-  .logo{font-size:19px}
-  .logo span{font-size:11px}
-  nav{display:none}
-  .hero{min-height:auto}
-  .hero-inner{padding:55px 20px 60px}
-  .badge{font-size:11px;padding:7px 13px;margin-bottom:18px}
-  .hero h1{font-size:clamp(42px,12vw,55px);line-height:1.05;letter-spacing:-2.5px;margin-bottom:20px}
-  .hero p{font-size:16px;line-height:1.6;margin-bottom:28px}
-  .buttons{display:flex;flex-direction:column;gap:11px}
-  .buttons .btn{width:100%;text-align:center}
-  section{padding:60px 18px}
-  .section-title{margin-bottom:32px}
-  .section-title h2{font-size:30px;line-height:1.2}
-  .section-title p{font-size:14px;line-height:1.55}
-  .featured-grid{grid-template-columns:1fr;gap:22px}
-  .featured-card{border-radius:21px}
-  .product-image{height:260px}
-  .product-image img{width:100%;height:100%;object-fit:contain}
-  .product-content{padding:22px}
-  .product-content h3{font-size:20px;line-height:1.3}
-  .product-content p{font-size:14px;line-height:1.6}
-  .product-btn{width:100%;text-align:center;padding:13px 18px}
-  .services{grid-template-columns:1fr;gap:15px}
-  .card{padding:24px;border-radius:18px}
-  .icon{width:48px;height:48px;font-size:22px;margin-bottom:16px}
-  .card h3{font-size:18px}
-  .card p{font-size:13px;line-height:1.6}
-  .about-inner{grid-template-columns:1fr;padding:60px 20px;gap:35px}
-  .about h2{font-size:35px;line-height:1.15}
-  .about p{font-size:15px;line-height:1.7}
-  .points div{margin:13px 0;font-size:15px}
-  .cta{padding:48px 20px;border-radius:22px}
-  .cta h2{font-size:30px;line-height:1.2}
-  .cta p{font-size:14px;line-height:1.6}
-  .cta .btn{width:100%;text-align:center}
-  .enquiry-box{padding:22px 18px;border-radius:20px}
-  .form-row{grid-template-columns:1fr;gap:0}
-  .field{margin-bottom:18px}
-  .field label{font-size:13px}
-  .field input,.field select,.field textarea{font-size:16px;padding:14px}
-  .submit-btn{font-size:15px;padding:15px}
-  .contact-grid{grid-template-columns:1fr;gap:16px}
-  .contact-card{padding:24px;border-radius:18px}
-  .contact-card .btn{width:100%;text-align:center;margin-top:8px}
-  .whatsapp{width:54px;height:54px;right:16px;bottom:16px;font-size:24px}
-  footer{padding:25px 15px;font-size:13px}
-}
-@media (max-width:400px){
-  .hero-inner{padding:45px 17px 50px}
-  .hero h1{font-size:40px}
-  .hero p{font-size:15px}
-  section{padding:50px 15px}
-  .section-title h2{font-size:27px}
-  .product-image{height:230px}
-  .about h2{font-size:31px}
-}
-
-
-
-.social-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:12px;
-}
-
-@media(max-width:650px){
-  .social-buttons{
-    flex-direction:column;
-  }
-
-  .social-buttons .btn{
-    width:100%;
-    text-align:center;
-  }
-}
-
-/* SOCIAL & LOCATION LINKS */
-.contact-card a[href*="instagram.com"]{color:#155eef;font-weight:700;}
-.contact-card a[href*="instagram.com"]:hover{text-decoration:underline;}
-
-/* ===== PREMIUM TRUST + WHY US DESIGN ===== */
-
-.trust-stats{
-  max-width:1150px;
-  margin:0 auto;
-  padding:18px 22px 10px;
-}
-
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:14px;
-  background:#111827;
-  border-radius:24px;
-  padding:24px;
-  box-shadow:0 18px 45px rgba(17,24,39,.10);
-}
-
-.stat-item{
-  text-align:center;
-  padding:12px 8px;
-  border-right:1px solid rgba(255,255,255,.12);
-}
-
-.stat-item:last-child{
-  border-right:0;
-}
-
-.stat-number{
-  font-size:28px;
-  font-weight:800;
-  letter-spacing:-.5px;
-  color:#ffffff;
-}
-
-.stat-label{
-  margin-top:4px;
+.section-heading p{color:var(--muted)}
+.eyebrow{
+  display:inline-block;
   font-size:12px;
-  font-weight:600;
-  color:#bfc7d6;
+  font-weight:800;
+  letter-spacing:1.3px;
+  color:var(--blue);
+  margin-bottom:14px;
 }
-
-.why-us{
-  padding-top:70px;
-  padding-bottom:75px;
-}
-
-.why-grid{
-  max-width:1000px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.why-card{
-  background:#ffffff;
-  border:1px solid #e8edf5;
-  border-radius:20px;
-  padding:25px 20px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(30,60,90,.05);
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-
-.why-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 40px rgba(30,60,90,.10);
-}
-
-.why-icon{
-  width:52px;
-  height:52px;
-  margin:0 auto 15px;
-  display:flex;
-  align-items:center;
+.btn{
+  display:inline-flex;
   justify-content:center;
-  border-radius:16px;
-  background:#edf4ff;
-  font-size:24px;
+  align-items:center;
+  gap:8px;
+  min-height:48px;
+  padding:13px 21px;
+  border:1px solid transparent;
+  border-radius:12px;
+  font-weight:700;
+  text-align:center;
+  transition:transform .2s,background .2s,box-shadow .2s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--blue);color:white}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-secondary{background:white;color:var(--ink);border-color:var(--line)}
+.btn-whatsapp{background:var(--green);color:white}
+.btn-whatsapp:hover{background:#10632f}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+a:focus-visible,button:focus-visible,input:focus-visible,
+select:focus-visible,textarea:focus-visible{
+  outline:3px solid var(--blue);
+  outline-offset:4px;
+}
+.skip-link{
+  position:absolute;left:12px;top:-100px;
+  padding:12px;background:white;z-index:10000;
+}
+.skip-link:focus{top:12px}
+
+/* ===== HEADER ===== */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px);
+}
+.nav{
+  display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+  padding:17px 0;
+}
+.logo{
+  display:flex;flex-direction:column;
+  font-size:26px;font-weight:900;
+  color:var(--blue);line-height:1.1;
+}
+.logo span{
+  color:var(--pink);font-size:12px;
+  letter-spacing:.4px;margin-top:5px;
+}
+#mainNav{display:flex;align-items:center;gap:23px}
+#mainNav a{font-size:14px;font-weight:700}
+#mainNav a:hover{color:var(--blue)}
+#mainNav .nav-quote{
+  background:var(--blue);color:white;
+  padding:11px 16px;border-radius:10px;
+}
+.menu-toggle{
+  display:none;background:white;
+  border:1px solid var(--line);
+  border-radius:10px;padding:9px 12px;
+  min-height:44px;font-weight:700;color:var(--ink);
 }
 
-.why-card h3{
-  font-size:18px;
-  margin-bottom:8px;
+/* ===== HERO ===== */
+.hero{
+  position:relative;overflow:hidden;
+  padding:80px 0;
+  background:
+    radial-gradient(circle at 90% 10%,#fce0ef,transparent 35%),
+    radial-gradient(circle at 5% 90%,#dbeaff,transparent 35%),
+    #fff;
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  align-items:center;gap:50px;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#eaf2ff;color:var(--blue);
+  padding:8px 13px;border-radius:30px;
+  font-size:12px;font-weight:800;margin-bottom:22px;
+}
+.hero h1{
+  font-size:clamp(42px,5.8vw,72px);
+  line-height:1.04;letter-spacing:-2.8px;
+  margin-bottom:24px;
+}
+.hero h1 span{color:var(--blue)}
+.hero-description{
+  max-width:600px;color:var(--muted);
+  font-size:18px;margin-bottom:28px;
+}
+.hero-note{font-size:13px;color:var(--muted);margin-top:18px}
+.hero-panel{
+  padding:28px;border-radius:28px;
+  border:1px solid rgba(255,255,255,.9);
+  background:rgba(255,255,255,.85);
+  box-shadow:0 25px 70px rgba(21,94,239,.12);
+  transform:rotate(2deg);
+}
+.hero-panel-title{font-size:13px;color:var(--muted);margin-bottom:18px}
+.design-preview{
+  background:#111827;border-radius:18px;
+  padding:32px 25px;min-height:220px;color:white;
+  position:relative;overflow:hidden;
+}
+.design-preview::after{
+  content:"";position:absolute;width:130px;height:130px;
+  border-radius:50%;right:-35px;bottom:-45px;
+  background:linear-gradient(135deg,#155eef,#ef4b8b);
+}
+.preview-label{
+  font-size:11px;letter-spacing:2px;
+  color:#bac9ff;margin-bottom:18px;
+}
+.preview-name{font-size:35px;line-height:1.05;font-weight:900}
+.preview-name span{color:#ffa5d0}
+.preview-caption{font-size:12px;color:#cbd5e1;margin-top:17px}
+.colour-strip{display:flex;gap:7px;margin-top:22px}
+.colour-strip span{width:22px;height:22px;border-radius:50%}
+.colour-strip span:nth-child(1){background:#00b7ef}
+.colour-strip span:nth-child(2){background:#ed3897}
+.colour-strip span:nth-child(3){background:#ffd240}
+.colour-strip span:nth-child(4){background:#111827}
+.hero-panel-footer{
+  display:flex;justify-content:space-between;
+  gap:10px;font-size:12px;font-weight:700;margin-top:19px;
+}
+.preview-disclaimer{font-size:11px;color:var(--muted);margin-top:12px}
+
+/* ===== HIGHLIGHTS ===== */
+.highlights{padding:25px 0 0}
+.highlights-grid{
+  background:#111827;color:white;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-radius:20px;padding:22px 12px;
+}
+.highlight{text-align:center;padding:10px;border-right:1px solid #334155}
+.highlight:last-child{border:0}
+.highlight strong{display:block;font-size:18px}
+.highlight span{font-size:12px;color:#cbd5e1}
+
+/* ===== PRODUCTS ===== */
+.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.product-card{
+  border:1px solid var(--line);background:white;
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.product-visual{
+  height:290px;background:#eef3fb;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.product-visual img{width:100%;height:100%;object-fit:contain}
+.product-fallback{
+  text-align:center;padding:25px;color:var(--blue);
+}
+.product-fallback span{display:block;font-size:58px;margin-bottom:10px}
+.product-visual.festival{
+  background:linear-gradient(135deg,#fff1db,#ffe4ee);
+  color:#a33958;text-align:center;padding:25px;
+}
+.festival-icon{font-size:62px;display:block;margin-bottom:12px}
+.festival strong{font-size:25px;display:block}
+.festival small{display:block;margin-top:8px}
+.product-content{padding:27px}
+.product-content h3{font-size:23px;line-height:1.25;margin-bottom:12px}
+.product-content p{color:var(--muted);font-size:14px;margin-bottom:20px}
+.product-content .btn{width:100%}
+
+/* ===== SERVICES & WHY US ===== */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.service-card,.why-card{
+  padding:27px;background:white;
+  border:1px solid var(--line);border-radius:20px;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.service-card:hover,.why-card:hover{
+  transform:translateY(-5px);
+  border-color:#b7cdfa;box-shadow:var(--shadow);
+}
+.icon{
+  display:flex;align-items:center;justify-content:center;
+  width:50px;height:50px;border-radius:15px;
+  background:#edf4ff;font-size:25px;margin-bottom:19px;
+}
+.service-card h3,.why-card h3{font-size:18px;margin-bottom:8px}
+.service-card p,.why-card p{font-size:14px;color:var(--muted)}
+.service-link{
+  display:inline-block;color:var(--blue);
+  font-size:13px;font-weight:800;margin-top:18px;
+}
+.why-section{background:#edf3fc}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+
+/* ===== ABOUT & PROCESS ===== */
+.about{background:#111827;color:white}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.about h2{font-size:clamp(30px,4vw,44px);line-height:1.15;margin-bottom:20px}
+.about p{color:#cbd5e1}
+.about .eyebrow{color:#a9c6ff}
+.process-list{list-style:none;display:grid;gap:20px}
+.process-list li{display:flex;gap:15px;align-items:flex-start}
+.step-number{
+  width:38px;height:38px;border-radius:11px;
+  background:#263655;color:#b8d1ff;display:flex;
+  align-items:center;justify-content:center;flex-shrink:0;font-weight:800;
+}
+.process-list strong{display:block;margin-bottom:3px}
+.process-list p{font-size:14px}
+
+/* ===== QUOTE FORM ===== */
+.enquiry-layout{
+  display:grid;grid-template-columns:.8fr 1.2fr;
+  gap:40px;align-items:start;
+}
+.enquiry-intro h2{
+  font-size:clamp(30px,4vw,42px);
+  line-height:1.16;letter-spacing:-1px;margin-bottom:18px;
+}
+.enquiry-intro p{color:var(--muted);margin-bottom:20px}
+.quote-points{list-style:none;display:grid;gap:12px;margin:23px 0}
+.quote-points li{font-size:14px}
+.quote-points li::before{content:"✓";color:var(--green);font-weight:800;margin-right:9px}
+.enquiry-box{
+  background:white;padding:30px;
+  border:1px solid var(--line);border-radius:24px;
+  box-shadow:var(--shadow);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:19px;min-width:0}
+.field label{display:block;font-size:13px;font-weight:800;margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 14px;border:1px solid #cdd7e6;
+  border-radius:11px;background:#fbfdff;
+  color:var(--ink);font-size:16px;
+}
+.field textarea{resize:vertical;min-height:120px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--blue);
+}
+.submit-btn{width:100%;border:0}
+.form-note{color:var(--muted);font-size:12px;margin-top:12px}
+.form-status{font-size:13px;margin-top:12px;color:var(--green)}
+.form-status a{text-decoration:underline;font-weight:700}
+
+/* ===== CTA & CONTACT ===== */
+.cta{
+  border-radius:26px;
+  background:linear-gradient(120deg,#155eef,#813ac4);
+  color:white;padding:48px 30px;
+  display:flex;align-items:center;justify-content:space-between;gap:25px;
+}
+.cta h2{font-size:30px;line-height:1.2;margin-bottom:9px}
+.cta p{color:#e6eaff}
+.cta .btn{flex-shrink:0;background:white;color:#173f9b}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-card{
+  background:white;border:1px solid var(--line);
+  border-radius:20px;padding:29px;min-width:0;
+}
+.contact-card h3{font-size:21px;margin-bottom:16px}
+.contact-card p{color:var(--muted);margin-bottom:12px;overflow-wrap:anywhere}
+.contact-card a:not(.btn){color:var(--blue)}
+.contact-card .buttons{margin-top:21px}
+footer{
+  background:#0b1220;color:#b9c1cf;
+  padding:27px 0 110px;font-size:13px;
+}
+.footer-inner{
+  display:flex;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;
+}
+footer strong{color:white}
+
+/* ===== FLOATING BUTTONS ===== */
+.floating-whatsapp,.chat-launcher{
+  position:fixed;right:20px;width:56px;height:56px;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 25px rgba(17,24,39,.22);
+  z-index:200;border:0;font-size:25px;color:white;
+}
+.floating-whatsapp{bottom:20px;background:var(--green)}
+.chat-launcher{bottom:88px;background:#111827}
+.chat-open .chat-launcher{display:none}
+
+/* ===== ORDER ASSISTANT ===== */
+.chat-box{
+  position:fixed;right:20px;bottom:88px;
+  width:380px;max-width:calc(100vw - 28px);
+  height:590px;
+  height:min(590px,calc(100dvh - 115px));
+  border:1px solid var(--line);border-radius:22px;
+  background:white;box-shadow:0 25px 80px rgba(17,24,39,.25);
+  overflow:hidden;z-index:300;display:flex;flex-direction:column;
+}
+.chat-box[hidden]{display:none}
+.chat-header{background:#111827;color:white;padding:18px;position:relative}
+.chat-header strong{display:block;padding-right:36px;font-size:14px}
+.chat-header small{display:block;color:#cbd5e1;font-size:11px;margin-top:3px}
+.chat-close{
+  position:absolute;right:10px;top:12px;
+  width:36px;height:36px;border:0;border-radius:50%;
+  background:#334155;color:white;font-size:23px;
+}
+.chat-messages{
+  flex:1;min-height:0;overflow-y:auto;
+  padding:15px;background:#f1f5fb;
+}
+.chat-message{
+  max-width:91%;padding:11px 13px;
+  border-radius:14px;margin-bottom:11px;
+  font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere;
+}
+.chat-message.bot{background:white;border:1px solid var(--line)}
+.chat-message.user{background:var(--blue);color:white;margin-left:auto}
+.chat-options{
+  padding:8px 12px;max-height:170px;overflow-y:auto;
+  background:white;flex-shrink:0;
+}
+.chat-options:empty{display:none}
+.chat-option{
+  display:block;width:100%;padding:10px;margin:4px 0;
+  min-height:44px;border:1px solid #bad0ff;border-radius:10px;
+  background:#f5f8ff;color:var(--blue-dark);font-size:13px;font-weight:700;
+}
+.chat-option:hover{background:#e6efff}
+.chat-input-area{
+  display:flex;gap:8px;padding:11px;
+  border-top:1px solid var(--line);background:white;
+}
+.chat-input-area input{
+  flex:1;min-width:0;border:1px solid #cdd7e6;
+  border-radius:10px;padding:11px;font-size:16px;
+}
+.chat-input-area input:disabled{background:#f1f5f9;color:#64748b}
+.chat-send{
+  min-width:45px;min-height:45px;background:var(--blue);
+  color:white;border:0;border-radius:10px;font-weight:800;
+}
+.chat-send:disabled{opacity:.4;cursor:not-allowed}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1000px){
+  .nav{flex-wrap:wrap}
+  .menu-toggle{display:block;margin-left:auto}
+  #mainNav{
+    display:none;width:100%;flex-direction:column;
+    align-items:stretch;gap:4px;
+    padding-top:12px;border-top:1px solid var(--line);
+  }
+  #mainNav.is-open{display:flex}
+  #mainNav a{padding:11px 12px;border-radius:9px}
+  #mainNav a:hover{background:#edf4ff}
+  #mainNav .nav-quote{text-align:center;background:var(--blue);color:white}
+  .hero-grid{gap:30px}
+  .hero-panel{padding:20px}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
 }
 
-.why-card p{
-  color:#718096;
-  font-size:13px;
-  line-height:1.6;
+@media(max-width:760px){
+  .container{width:calc(100% - 36px)}
+  .section{padding:56px 0}
+  .hero{padding:52px 0}
+  .hero-grid{grid-template-columns:1fr;gap:35px}
+  .hero h1{font-size:clamp(42px,10vw,62px);letter-spacing:-1.8px}
+  .hero-description{font-size:16px}
+  .hero-panel{transform:none;max-width:480px;width:100%;margin:auto}
+  .design-preview{min-height:180px}
+  .hero .buttons .btn{flex:1}
+  .highlights-grid{grid-template-columns:1fr 1fr;padding:10px}
+  .highlight{padding:15px 8px;border-bottom:1px solid #334155}
+  .highlight:nth-child(2){border-right:0}
+  .highlight:nth-child(3){border-bottom:0}
+  .highlight:nth-child(4){border:0}
+  .highlight strong{font-size:16px}
+  .product-grid,.about-grid,.enquiry-layout,.contact-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{gap:35px}
+  .enquiry-layout{gap:25px}
+  .cta{flex-direction:column;text-align:center;padding:35px 22px}
+  .cta .btn{width:100%}
 }
 
-/* PREMIUM BUTTON MOTION */
-.btn,
-.product-btn,
-.submit-btn{
-  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+@media(max-width:480px){
+  .logo{font-size:23px}
+  .logo span{font-size:11px}
+  .services-grid,.why-grid{grid-template-columns:1fr}
+  .service-card,.why-card{padding:23px}
+  .form-row{grid-template-columns:1fr;gap:0}
+  .enquiry-box{padding:22px 18px}
+  .product-visual{height:250px}
+  .product-content{padding:23px}
+  .buttons{flex-direction:column}
+  .buttons .btn{width:100%}
+  .hero-panel-footer{font-size:11px}
+  .chat-box{
+    right:10px;bottom:78px;
+    width:calc(100vw - 20px);
+    max-width:none;
+    height:min(590px,calc(100dvh - 95px));
+  }
+  .floating-whatsapp,.chat-launcher{right:15px;width:53px;height:53px}
+  .floating-whatsapp{bottom:15px}
+  .chat-launcher{bottom:80px}
 }
 
-.btn:hover,
-.product-btn:hover,
-.submit-btn:hover{
-  transform:translateY(-2px);
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .btn:hover,.service-card:hover,.why-card:hover{transform:none}
 }
-
-/* MOBILE */
-@media(max-width:800px){
-
-  .trust-stats{
-    padding:10px 18px 0;
-  }
-
-  .stats-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:0;
-    padding:12px 8px;
-    border-radius:20px;
-  }
-
-  .stat-item{
-    padding:16px 8px;
-    border-right:1px solid rgba(255,255,255,.12);
-    border-bottom:1px solid rgba(255,255,255,.12);
-  }
-
-  .stat-item:nth-child(2),
-  .stat-item:nth-child(4){
-    border-right:0;
-  }
-
-  .stat-item:nth-child(3),
-  .stat-item:nth-child(4){
-    border-bottom:0;
-  }
-
-  .stat-number{
-    font-size:23px;
-  }
-
-  .stat-label{
-    font-size:11px;
-  }
-
-  .why-us{
-    padding-top:55px;
-    padding-bottom:60px;
-  }
-
-  .why-grid{
-    grid-template-columns:1fr;
-    gap:14px;
-  }
-
-  .why-card{
-    display:grid;
-    grid-template-columns:52px 1fr;
-    column-gap:15px;
-    text-align:left;
-    align-items:center;
-    padding:19px;
-  }
-
-  .why-icon{
-    grid-row:span 2;
-    margin:0;
-  }
-
-  .why-card h3{
-    margin:0 0 4px;
-  }
-
-  .why-card p{
-    margin:0;
-  }
-}
-
-@media(max-width:400px){
-
-  .stats-grid{
-    border-radius:18px;
-  }
-
-  .stat-number{
-    font-size:21px;
-  }
-
-  .why-card{
-    padding:17px;
-  }
-}
-
-
-/* ===== ONKAR ORDER CHATBOT ===== */
-#ogChatButton{
-  position:fixed;right:22px;bottom:92px;width:58px;height:58px;border:0;
-  border-radius:50%;background:#111827;color:#fff;font-size:25px;cursor:pointer;
-  box-shadow:0 12px 30px rgba(17,24,39,.25);z-index:5000;
-}
-#ogChatBox{
-  display:none;position:fixed;right:22px;bottom:92px;width:370px;max-width:calc(100vw - 28px);
-  height:570px;background:#fff;border:1px solid #e5e7eb;border-radius:22px;
-  overflow:hidden;box-shadow:0 20px 60px rgba(17,24,39,.25);z-index:4999;
-  flex-direction:column;
-}
-.og-chat-head{background:#111827;color:#fff;padding:18px 18px 15px;flex:0 0 auto}
-.og-chat-head strong{display:block;font-size:16px}.og-chat-head small{opacity:.72}
-#ogMessages{flex:1;min-height:0;overflow-y:auto;padding:15px;background:#f5f7fb}
-.og-msg{max-width:88%;padding:10px 13px;margin:0 0 10px;border-radius:14px;font-size:14px;line-height:1.5}
-.og-bot{background:#fff;border:1px solid #e8edf5;border-top-left-radius:5px}
-.og-user{background:#155eef;color:#fff;margin-left:auto;border-top-right-radius:5px}
-#ogOptions{padding:9px 11px;background:#fff;flex:0 0 auto;max-height:120px;overflow-y:auto}
-.og-option{width:100%;padding:9px 11px;margin:3px 0;border:1px solid #155eef;background:#fff;color:#155eef;
-border-radius:9px;font-weight:700;cursor:pointer;font-size:13px}
-.og-option:hover{background:#155eef;color:#fff}
-#ogInputArea{display:flex;padding:9px;border-top:1px solid #e8edf5;background:#fff;flex:0 0 auto}
-#ogInput{flex:1;min-width:0;border:1px solid #dce3ee;border-radius:9px;padding:10px;outline:0;font-size:14px}
-#ogSend{margin-left:7px;border:0;background:#155eef;color:#fff;border-radius:9px;padding:0 14px;cursor:pointer}
-.og-chat-open #ogChatButton{display:none}
-@media(max-width:600px){
-  #ogChatBox{
-    right:10px;bottom:72px;width:calc(100vw - 20px);
-    height:min(560px,calc(100vh - 95px));max-height:none;
-  }
-  #ogChatButton{right:16px;bottom:82px}
-}
-
 </style>
 </head>
 
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- HEADER -->
-
 <header>
+  <div class="container nav">
+    <a class="logo" href="#home" aria-label="Onkar Graphics and Printing home">
+      Onkar
+      <span>Graphics & Printing</span>
+    </a>
 
-<div class="nav">
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mainNav"
+    >☰ Menu</button>
 
-  <div class="logo">
-    Onkar <span>Graphics & Printing</span>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#featured">Products</a>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#enquiry" class="nav-quote">Get a Quote ↗</a>
+    </nav>
   </div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#featured">Featured</a>
-    <a href="#services">Services</a>
-    <a href="#why-us">Why Us</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-</div>
-
 </header>
 
-
-<main>
+<main id="main">
 
 <!-- HERO -->
-
 <section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-badge">✦ DESIGN & PRINTING IN DOMBIVLI</div>
 
-<div class="hero-inner">
+      <h1>Your ideas.<br><span>Beautifully printed.</span></h1>
 
-  <div class="badge">
-    CREATIVE • PRINT • QUALITY
+      <p class="hero-description">
+        Creative graphic design and custom printing for your business,
+        celebrations and everyday ideas. From visiting cards to banners,
+        T-shirts and personalised acrylic products.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="#enquiry">Get a Custom Quote ↗</a>
+        <a class="btn btn-secondary" href="#services">Explore Services</a>
+      </div>
+
+      <p class="hero-note">Custom designs • Personalised products • WhatsApp enquiries</p>
+    </div>
+
+    <div class="hero-panel" aria-label="Illustrative brand design">
+      <p class="hero-panel-title">A little creativity. A lasting impression.</p>
+
+      <div class="design-preview">
+        <p class="preview-label">DESIGN • PRINT • CREATE</p>
+        <div class="preview-name">ONKAR<br><span>GRAPHICS.</span></div>
+        <p class="preview-caption">Your vision. Our printing.</p>
+      </div>
+
+      <div class="hero-panel-footer">
+        <span>Made around your idea</span>
+        <span>Dombivli, Maharashtra</span>
+      </div>
+
+      <div class="colour-strip" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <p class="preview-disclaimer">Illustrative design preview, not a product photograph.</p>
+    </div>
   </div>
+</section>
 
-  <h1>
-    Your Vision.<br>
-    <span>Our Printing.</span>
-  </h1>
-
-  <p>
-    Professional graphic designing and printing solutions
-    for businesses, brands, events and special occasions.
-  </p>
-
-  <div class="buttons">
-
-    <a class="btn primary" href="#enquiry">
-      Get a Quote
-    </a>
-
-    <a class="btn secondary" href="#services">
-      Explore Services →
-    </a>
-
+<!-- BUSINESS HIGHLIGHTS -->
+<div class="highlights">
+  <div class="container">
+    <div class="highlights-grid">
+      <div class="highlight">
+        <strong>Custom Design</strong>
+        <span>Created for your requirement</span>
+      </div>
+      <div class="highlight">
+        <strong>Print Solutions</strong>
+        <span>For business & celebrations</span>
+      </div>
+      <div class="highlight">
+        <strong>Personalised</strong>
+        <span>Names, artwork & branding</span>
+      </div>
+      <div class="highlight">
+        <strong>Let's Talk</strong>
+        <span>Easy WhatsApp enquiries</span>
+      </div>
+    </div>
   </div>
-
 </div>
 
-</section>
-
-
 <!-- FEATURED PRODUCTS -->
-
-<section id="featured">
-
-  <div class="section-title">
-
-    <div class="badge">
-      ✨ FEATURED PRODUCTS
+<section class="section" id="featured">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">FEATURED PRODUCTS</span>
+      <h2>Personalised for your special moments.</h2>
+      <p>Explore customised acrylic products and Ganpati celebration printing.</p>
     </div>
 
-    <h2>
-      Trending This Ganeshotsav
-    </h2>
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-visual">
+          <img
+            id="badgeImage"
+            src="acrylic-badge.jpg"
+            alt="Custom acrylic hanging badge"
+            width="600"
+            height="440"
+            loading="lazy"
+            decoding="async"
+          >
+          <div class="product-fallback" id="badgeFallback" hidden>
+            <span aria-hidden="true">🎖️</span>
+            <strong>Personalised Acrylic Badges</strong>
+            <p>Ask us for product photos on WhatsApp.</p>
+          </div>
+        </div>
 
-    <p>
-      Make your Ganpati celebration more special with our customised products.
-    </p>
+        <div class="product-content">
+          <h3>Premium Acrylic Hanging Badges</h3>
+          <p>
+            Personalised names and creative designs for your celebration.
+            Tell us your preferred size, background and finishing.
+          </p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-start-order="Badge"
+          >Customise Your Badge →</button>
+        </div>
+      </article>
 
-  </div>
+      <article class="product-card">
+        <div class="product-visual festival">
+          <div>
+            <span class="festival-icon" aria-hidden="true">🪔</span>
+            <strong>Ganpati Banners<br>& Backdrops</strong>
+            <small>Custom designs for your celebration</small>
+          </div>
+        </div>
 
-
-  <div class="featured-grid">
-
-
-    <!-- ACRYLIC HANGING BADGE -->
-
-    <div class="featured-card">
-
-      <div class="product-image">
-
-        <img
-          src="acrylic-badge.jpg"
-          alt="Premium Acrylic Hanging Badge"
-        >
-
-      </div>
-
-      <div class="product-content">
-
-        <h3>
-          Premium Acrylic Hanging Badges
-        </h3>
-
-        <p>
-          Customised acrylic hanging badges with personalised
-          names and creative designs.
-        </p>
-
-        <a href="#enquiry" class="product-btn">
-          Enquire Now →
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- GANPATI BANNER -->
-
-    <div class="featured-card">
-
-      <div class="product-image banner-placeholder">
-
-        <span>🪔</span>
-
-        <p>
-          Ganpati Banner
-        </p>
-
-      </div>
-
-      <div class="product-content">
-
-        <h3>
-          Ganpati Banners & Backdrops
-        </h3>
-
-        <p>
-          Creative Ganpati banners and backdrop designs
-          for your home, mandal and celebrations.
-        </p>
-
-        <a href="#enquiry" class="product-btn">
-          Enquire Now →
-        </a>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-<!-- TRUST STATS -->
-<section class="trust-stats" aria-label="Business highlights">
-  <div class="stats-grid">
-    <div class="stat-item">
-      <div class="stat-number">5,000+</div>
-      <div class="stat-label">Happy Customers</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">Customised Work</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Fast</div>
-      <div class="stat-label">Customer Response</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">Premium</div>
-      <div class="stat-label">Print Quality</div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="why-us" id="why-us">
-  <div class="section-title">
-    <div class="badge">WHY CHOOSE US</div>
-    <h2>Made with creativity.<br>Delivered with quality.</h2>
-    <p>Professional design and printing solutions for every requirement.</p>
-  </div>
-
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-icon">✨</div>
-      <h3>Premium Quality</h3>
-      <p>Clean designs, sharp printing and quality-focused finishing.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">🎨</div>
-      <h3>Creative Designs</h3>
-      <p>Modern and customised designs made around your requirement.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">⚡</div>
-      <h3>Quick Response</h3>
-      <p>Easy communication and fast response for enquiries and orders.</p>
-    </div>
-
-    <div class="why-card">
-      <div class="why-icon">🤝</div>
-      <h3>Customer Focused</h3>
-      <p>We understand your requirement and help you choose the right solution.</p>
+        <div class="product-content">
+          <h3>Ganpati Banners & Backdrops</h3>
+          <p>
+            Custom designs for your home, mandal and celebrations.
+            Share the size, text and theme you have in mind.
+          </p>
+          <a
+            class="btn btn-primary"
+            href="#enquiry"
+            data-service="Ganpati Banners & Backdrops"
+          >Enquire About a Banner →</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-
-<section id="services">
-
-<div class="section-title">
-
-  <h2>
-    Our Services
-  </h2>
-
-  <p>
-    Everything you need to make your brand stand out.
-  </p>
-
-</div>
-
-
-<div class="services">
-
-
-<div class="card">
-
-<div class="icon">🎨</div>
-
-<h3>
-Graphic Designing
-</h3>
-
-<p>
-Creative and professional designs for businesses,
-events and social media.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🖨️</div>
-
-<h3>
-Digital Printing
-</h3>
-
-<p>
-High-quality printing solutions with sharp colours
-and premium finishing.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">📢</div>
-
-<h3>
-Flex & Banner Printing
-</h3>
-
-<p>
-Eye-catching banners, flex prints and promotional materials.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">👕</div>
-
-<h3>
-DTF T-Shirt Printing
-</h3>
-
-<p>
-Custom T-shirt printing for brands, events,
-teams and personal occasions.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">💳</div>
-
-<h3>
-Visiting Cards
-</h3>
-
-<p>
-Premium visiting cards designed to create
-a strong first impression.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">✨</div>
-
-<h3>
-Acrylic Products
-</h3>
-
-<p>
-Custom acrylic badges, name plates and creative
-personalised products.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🪧</div>
-
-<h3>
-Sunboard & Vinyl
-</h3>
-
-<p>
-Professional signage and promotional display solutions.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">💌</div>
-
-<h3>
-Invitation Cards
-</h3>
-
-<p>
-Beautiful invitation designs for weddings,
-birthdays and special events.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">📦</div>
-
-<h3>
-Custom Printing
-</h3>
-
-<p>
-Tell us what you need and we'll create
-a customised printing solution.
-</p>
-
-</div>
-
-
-</div>
-
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">WHAT WE DO</span>
+      <h2>One place. Plenty of possibilities.</h2>
+      <p>Design and printing solutions for businesses, events and personal projects.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🎨</div>
+        <h3>Graphic Designing</h3>
+        <p>Custom designs for business branding, promotions, events and social media.</p>
+        <a class="service-link" href="#enquiry" data-service="Graphic Designing">Request a Quote →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🖨️</div>
+        <h3>Digital Printing</h3>
+        <p>Printed materials for your business, promotions and personal requirements.</p>
+        <a class="service-link" href="#enquiry" data-service="Digital Printing">Request a Quote →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">📢</div>
+        <h3>Flex & Banner Printing</h3>
+        <p>Promotional banners and flex designs made around your message and size.</p>
+        <a class="service-link" href="#enquiry" data-service="Flex & Banner Printing">Request a Quote →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">👕</div>
+        <h3>DTF T-Shirt Printing</h3>
+        <p>Custom T-shirts for your brand, team, event or personalised gifting idea.</p>
+        <button class="service-link" type="button" data-start-order="T-Shirt"
+          style="border:0;background:none">Customise a T-Shirt →</button>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">💳</div>
+        <h3>Visiting Cards</h3>
+        <p>Business cards that introduce your brand with a clear, professional design.</p>
+        <a class="service-link" href="#enquiry" data-service="Visiting Cards">Request a Quote →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">✨</div>
+        <h3>Acrylic Products</h3>
+        <p>Personalised badges, name plates and custom acrylic product enquiries.</p>
+        <a class="service-link" href="#enquiry" data-service="Acrylic Products">Request a Quote →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">🪧</div>
+        <h3>Sunboard & Vinyl</h3>
+        <p>Signage and display printing for your shop, event or business promotion.</p>
+        <a class="service-link" href="#enquiry" data-service="Sunboard & Vinyl">Request a Quote →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">💌</div>
+        <h3>Invitation Cards</h3>
+        <p>Custom invitation designs for weddings, birthdays and special occasions.</p>
+        <a class="service-link" href="#enquiry" data-service="Invitation Cards">Request a Quote →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="icon" aria-hidden="true">📦</div>
+        <h3>Custom Printing</h3>
+        <p>Have something different in mind? Share your idea and discuss the options.</p>
+        <a class="service-link" href="#enquiry" data-service="Other">Discuss Your Idea →</a>
+      </article>
+    </div>
+  </div>
 </section>
 
+<!-- WHY US -->
+<section class="section why-section" id="why-us">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">WHY ONKAR?</span>
+      <h2>Made around your requirement.</h2>
+      <p>Creative ideas, practical options and direct communication.</p>
+    </div>
 
-<!-- ABOUT -->
+    <div class="why-grid">
+      <article class="why-card">
+        <div class="icon" aria-hidden="true">🎨</div>
+        <h3>Creative Approach</h3>
+        <p>Designs shaped around your message, occasion and brand.</p>
+      </article>
 
-<div class="about" id="about">
+      <article class="why-card">
+        <div class="icon" aria-hidden="true">🛠️</div>
+        <h3>Custom Options</h3>
+        <p>Discuss sizes, quantities, artwork and finishing before ordering.</p>
+      </article>
 
-<div class="about-inner">
+      <article class="why-card">
+        <div class="icon" aria-hidden="true">💬</div>
+        <h3>Easy Communication</h3>
+        <p>Share your requirement and discuss your project on WhatsApp.</p>
+      </article>
 
-<div>
-
-<h2>
-Creative ideas.<br>
-Premium printing.
-</h2>
-
-<p>
-At Onkar Graphics & Printing, we combine creative design
-with quality printing to help businesses and individuals
-present themselves professionally.
-</p>
-
-</div>
-
-
-<div class="points">
-
-<div>✓ Premium Quality</div>
-
-<div>✓ Creative & Modern Designs</div>
-
-<div>✓ Custom Printing Solutions</div>
-
-<div>✓ Professional Service</div>
-
-<div>✓ Customer-Focused Approach</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- CTA -->
-
-<section>
-
-<div class="cta">
-
-<h2>
-Let's Create Something Amazing.
-</h2>
-
-<p>
-Have a design or printing requirement?
-Let's discuss your project.
-</p>
-
-<a
-  class="btn secondary"
-  href="https://wa.me/919637822996"
-  target="_blank"
->
-Chat on WhatsApp
-</a>
-
-</div>
-
+      <article class="why-card">
+        <div class="icon" aria-hidden="true">🤝</div>
+        <h3>Personal Attention</h3>
+        <p>Get help choosing a design and printing solution for your needs.</p>
+      </article>
+    </div>
+  </div>
 </section>
 
+<!-- ABOUT / PROCESS -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div>
+      <span class="eyebrow">ONKAR GRAPHICS & PRINTING</span>
+      <h2>Your vision.<br>Our creativity.</h2>
+      <p>
+        Based in Dombivli, we bring together graphic design and printing
+        for businesses, individuals and celebrations. Whether you need
+        a business card or a personalised product, let's bring your idea to life.
+      </p>
+    </div>
+
+    <ol class="process-list">
+      <li>
+        <span class="step-number">01</span>
+        <div>
+          <strong>Share your requirement</strong>
+          <p>Tell us the product, quantity, size and date you need it.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-number">02</span>
+        <div>
+          <strong>Discuss the details</strong>
+          <p>Confirm artwork, available options, quotation and timing with our team.</p>
+        </div>
+      </li>
+      <li>
+        <span class="step-number">03</span>
+        <div>
+          <strong>Confirm your order</strong>
+          <p>Review the agreed details and discuss pickup or delivery arrangements.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
 
 <!-- ENQUIRY -->
+<section class="section" id="enquiry">
+  <div class="container enquiry-layout">
+    <div class="enquiry-intro">
+      <span class="eyebrow">LET'S START YOUR PROJECT</span>
+      <h2>Tell us what<br>you want to create.</h2>
+      <p>
+        Fill in your requirement. We'll prepare a WhatsApp message
+        so you can send the details directly to our team.
+      </p>
 
-<section id="enquiry">
+      <ul class="quote-points">
+        <li>Custom design and printing enquiries</li>
+        <li>Business, personal and event requirements</li>
+        <li>Discuss quantities, sizes and artwork</li>
+      </ul>
 
-<div class="section-title">
+      <a class="btn btn-secondary" href="tel:+919637822996">
+        Call +91 96378 22996
+      </a>
+    </div>
 
-<h2>
-Send an Enquiry
-</h2>
+    <div class="enquiry-box">
+      <form id="enquiryForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="customerName">Your Name *</label>
+            <input
+              id="customerName" name="name" type="text"
+              placeholder="Enter your name"
+              autocomplete="name" maxlength="100" required
+            >
+          </div>
 
-<p>
-Tell us what you need and we'll get back to you.
-</p>
+          <div class="field">
+            <label for="customerPhone">Mobile Number *</label>
+            <input
+              id="customerPhone" name="phone" type="tel"
+              placeholder="10-digit mobile number"
+              autocomplete="tel" maxlength="20" required
+            >
+          </div>
+        </div>
 
-</div>
+        <div class="field">
+          <label for="service">Service Required *</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Premium Acrylic Hanging Badges</option>
+            <option>Ganpati Banners & Backdrops</option>
+            <option>Graphic Designing</option>
+            <option>Digital Printing</option>
+            <option>Flex & Banner Printing</option>
+            <option>DTF T-Shirt Printing</option>
+            <option>Visiting Cards</option>
+            <option>Acrylic Products</option>
+            <option>Sunboard & Vinyl</option>
+            <option>Invitation Cards</option>
+            <option>Other</option>
+          </select>
+        </div>
 
+        <div class="form-row">
+          <div class="field">
+            <label for="quantity">Quantity</label>
+            <input
+              id="quantity" name="quantity" type="number"
+              min="1" max="99999999" step="1" placeholder="Example: 100"
+            >
+          </div>
 
-<div class="enquiry-box">
+          <div class="field">
+            <label for="requiredDate">Preferred Required Date</label>
+            <input id="requiredDate" name="requiredDate" type="date">
+          </div>
+        </div>
 
-<form onsubmit="sendEnquiry(event)">
+        <div class="field">
+          <label for="size">Size / Dimensions</label>
+          <input
+            id="size" name="size" type="text"
+            placeholder="Example: 3 × 6 feet"
+            maxlength="120"
+          >
+        </div>
 
+        <div class="field">
+          <label for="requirement">Your Requirement</label>
+          <textarea
+            id="requirement" name="requirement" rows="4"
+            maxlength="2000"
+            placeholder="Share the design, colours, text or other details..."
+          ></textarea>
+        </div>
 
-<div class="form-row">
+        <button class="btn btn-whatsapp submit-btn" type="submit">
+          Open Enquiry in WhatsApp ↗
+        </button>
 
+        <p class="form-note">
+          This form does not place an order. WhatsApp opens with your details;
+          press Send there to contact us. Share artwork in that chat.
+          Pricing and dates require confirmation.
+        </p>
 
-<div class="field">
+        <p id="formStatus" class="form-status" role="status"></p>
 
-<label>
-Your Name
-</label>
-
-<input
-  type="text"
-  id="name"
-  placeholder="Enter your name"
-  required
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-Mobile Number
-</label>
-
-<input
-  type="tel"
-  id="phone"
-  placeholder="Enter mobile number"
-  required
->
-
-</div>
-
-
-</div>
-
-
-<div class="field">
-
-<label>
-Service Required
-</label>
-
-<select id="service" required>
-
-<option value="">
-Select a service
-</option>
-
-<option>
-Premium Acrylic Hanging Badges
-</option>
-
-<option>
-Ganpati Banners & Backdrops
-</option>
-
-<option>
-Graphic Designing
-</option>
-
-<option>
-Digital Printing
-</option>
-
-<option>
-Flex & Banner Printing
-</option>
-
-<option>
-DTF T-Shirt Printing
-</option>
-
-<option>
-Visiting Cards
-</option>
-
-<option>
-Acrylic Products
-</option>
-
-<option>
-Sunboard & Vinyl
-</option>
-
-<option>
-Invitation Cards
-</option>
-
-<option>
-Other
-</option>
-
-</select>
-
-</div>
-
-
-<div class="field">
-
-<label>
-Quantity
-</label>
-
-<input
-  type="text"
-  id="quantity"
-  placeholder="Example: 100 cards"
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-Your Requirement
-</label>
-
-<textarea
-  id="message"
-  rows="5"
-  placeholder="Tell us about your requirement..."
-></textarea>
-
-</div>
-
-
-<button
-  type="submit"
-  class="submit-btn"
->
-💬 Send Enquiry on WhatsApp
-</button>
-
-
-</form>
-
-</div>
-
+        <noscript>
+          <p>Please enable JavaScript or contact us directly on +91 96378 22996.</p>
+        </noscript>
+      </form>
+    </div>
+  </div>
 </section>
 
+<!-- CTA -->
+<div class="container">
+  <div class="cta">
+    <div>
+      <h2>Have an idea? Let's print it.</h2>
+      <p>Start a conversation about your next design or printing project.</p>
+    </div>
+    <a
+      class="btn"
+      href="https://wa.me/919637822996"
+      target="_blank" rel="noopener noreferrer"
+    >Chat on WhatsApp ↗</a>
+  </div>
+</div>
 
 <!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">CONTACT US</span>
+      <h2>Let's create something together.</h2>
+      <p>Contact us for enquiries, quotations and personalised printing.</p>
+    </div>
 
-<section id="contact">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Onkar Graphics & Printing</h3>
+        <p>📍 Dombivli, Maharashtra</p>
+        <p>📱 <a href="tel:+919637822996">+91 96378 22996</a></p>
+        <p>🌐 <a href="https://onkargraphicsandprinting.in/">onkargraphicsandprinting.in</a></p>
 
-<div class="section-title">
+        <div class="buttons">
+          <a
+            class="btn btn-primary"
+            href="https://maps.app.goo.gl/YAqwRjnwKxWoABvs9"
+            target="_blank" rel="noopener noreferrer"
+          >View on Google Maps ↗</a>
 
-<h2>
-Get In Touch
-</h2>
+          <a class="btn btn-secondary" href="tel:+919637822996">Call Us</a>
+        </div>
+      </div>
 
-<p>
-We're ready to bring your ideas to life.
-</p>
+      <div class="contact-card">
+        <h3>Stay Connected</h3>
+        <p>Follow our Instagram for design inspiration and product updates.</p>
+        <p>
+          <a
+            href="https://www.instagram.com/onkargraphics_/"
+            target="_blank" rel="noopener noreferrer"
+          >@onkargraphics_</a>
+        </p>
 
-</div>
+        <div class="buttons">
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/919637822996"
+            target="_blank" rel="noopener noreferrer"
+          >WhatsApp Us</a>
 
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<h3>
-Contact
-</h3>
-
-<p>
-📱 <strong>+91 96378 22996</strong>
-</p>
-
-<p>
-📍 Dombivli, Maharashtra
-</p>
-<a class="btn secondary" href="https://maps.app.goo.gl/YAqwRjnwKxWoABvs9" target="_blank" rel="noopener" style="margin-top:10px;">
-  📍 View on Google Maps
-</a>
-
-<p>
-📧 onkargraphicsandprinting.in
-</p>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>
-Follow Us
-</h3>
-
-<p>
-Instagram:
-<strong><a href="https://www.instagram.com/onkargraphics_/" target="_blank" rel="noopener">@onkargraphics_</a></strong>
-</p>
-
-<p>
-For enquiries, quotations and custom orders,
-contact us on WhatsApp.
-</p>
-
-<div class="social-buttons">
-
-<a
-  class="btn primary"
-  href="https://wa.me/919637822996"
-  target="_blank"
->
-WhatsApp Us
-</a>
-
-<a
-  class="btn secondary"
-  href="https://www.instagram.com/onkargraphics_/"
-  target="_blank"
-  rel="noopener noreferrer"
->
-Instagram ↗
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
+          <a
+            class="btn btn-secondary"
+            href="https://www.instagram.com/onkargraphics_/"
+            target="_blank" rel="noopener noreferrer"
+          >Instagram ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-
 </main>
 
-
 <!-- FOOTER -->
-
 <footer>
-
-<p>
-© 2026 <strong>Onkar Graphics & Printing</strong>.
-All Rights Reserved.
-</p>
-
+  <div class="container footer-inner">
+    <p>© <span id="year">2026</span> <strong>Onkar Graphics & Printing.</strong> All rights reserved.</p>
+    <a href="#home">Back to top ↑</a>
+  </div>
 </footer>
 
+<!-- FLOATING CONTACT -->
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/919637822996"
+  target="_blank" rel="noopener noreferrer"
+  aria-label="Contact us on WhatsApp"
+  title="Chat on WhatsApp"
+>💬</a>
 
+<button
+  class="chat-launcher"
+  id="chatLauncher"
+  type="button"
+  aria-label="Open guided order assistant"
+  aria-expanded="false"
+  aria-controls="chatBox"
+  title="T-Shirt & Badge Enquiries"
+>🤖</button>
 
-<!-- ONKAR GRAPHICS ORDER CHATBOT -->
-<button id="ogChatButton" onclick="ogToggleChat()" aria-label="Order Chatbot">🤖</button>
-
-<div id="ogChatBox">
-  <div class="og-chat-head" style="position:relative">
-    <button onclick="ogToggleChat()" aria-label="Close chat"
-      style="position:absolute;right:12px;top:12px;border:0;background:rgba(255,255,255,.12);color:#fff;width:32px;height:32px;border-radius:50%;font-size:18px;cursor:pointer">×</button>
-    <strong style="padding-right:38px">ONKAR GRAPHICS & PRINTING</strong>
-    <small>Custom T-Shirt & Badge Orders</small>
+<!-- GUIDED ORDER ASSISTANT -->
+<div
+  class="chat-box"
+  id="chatBox"
+  role="region"
+  aria-label="Guided order assistant"
+  hidden
+>
+  <div class="chat-header">
+    <strong>ONKAR GRAPHICS & PRINTING</strong>
+    <small>Guided enquiry • T-Shirts & Badges • मराठी</small>
+    <button
+      class="chat-close"
+      id="chatClose"
+      type="button"
+      aria-label="Close order assistant"
+    >×</button>
   </div>
-  <div id="ogMessages"></div>
-  <div id="ogOptions"></div>
-  <div id="ogInputArea">
-    <input id="ogInput" type="text" placeholder="Type your answer..." autocomplete="off">
-    <button id="ogSend" onclick="ogSendAnswer()">➤</button>
-  </div>
+
+  <div
+    class="chat-messages"
+    id="chatMessages"
+    role="log"
+    aria-live="polite"
+    aria-relevant="additions"
+  ></div>
+
+  <div class="chat-options" id="chatOptions"></div>
+
+  <form class="chat-input-area" id="chatInputForm">
+    <input
+      id="chatInput"
+      type="text"
+      placeholder="Choose a product above"
+      aria-label="Your answer"
+      autocomplete="off"
+      maxlength="1000"
+      disabled
+    >
+    <button
+      class="chat-send"
+      id="chatSend"
+      type="submit"
+      aria-label="Send answer"
+      disabled
+    >➤</button>
+  </form>
 </div>
 
-<!-- FLOATING WHATSAPP -->
-
-<a
-  class="whatsapp"
-  href="https://wa.me/919637822996"
-  target="_blank"
-  aria-label="WhatsApp"
->
-💬
-</a>
-
-
-
 <script>
-/* ===== ONKAR ORDER CHATBOT ===== */
-const OG_WA = "919637822996";
-let ogProduct = "", ogStep = 0, ogOrder = {}, ogQuestions = [];
+"use strict";
 
-const OG_TSHIRT = [
-  ["👕 T-Shirt वर काय Design / Text हवं आहे?", "text"],
-  ["🎨 T-Shirt Colour कोणता हवा?", "text"],
-  ["📏 T-Shirt Size कोणता?", ["S","M","L","XL","XXL","Other"]],
-  ["🔢 किती Pieces हवेत?", "text"],
-  ["🖼️ तुमच्याकडे Design आहे का?", ["Yes","No"]],
-  ["👤 तुमचं नाव काय?", "text"],
-  ["📱 Mobile Number?", "text"],
-  ["🚚 Delivery की Pickup?", ["Delivery","Pickup"]]
-];
+const WHATSAPP_NUMBER = "919637822996";
 
-const OG_BADGE = [
-  ["🎖️ Badge वर नाव (मराठीत) काय हवं आहे?", "text"],
-  ["📏 Badge Size किती?", "text"],
-  ["🪔 मूर्ती Size किती?", "text"],
-  ["📿 Chain की Rudraksh?", ["Chain","Rudraksh"]],
-  ["⬛ Background — Black की White?", ["Black","White"]],
-  ["🔢 किती Badges हवेत?", "text"],
-  ["👤 तुमचं नाव काय?", "text"],
-  ["📱 Mobile Number?", "text"],
-  ["🚚 Delivery की Pickup?", ["Delivery","Pickup"]]
-];
+/* ===== GENERAL ===== */
+document.getElementById("year").textContent = new Date().getFullYear();
 
-function ogToggleChat(){
-  const box=document.getElementById("ogChatBox");
-  if(box.style.display==="flex"){
-    box.style.display="none";
-    document.body.classList.remove("og-chat-open");
-    return;
+function whatsappUrl(message){
+  return "https://wa.me/" + WHATSAPP_NUMBER +
+    "?text=" + encodeURIComponent(message);
+}
+
+function normalizePhone(value){
+  let number = value.replace(/[\s()+-]/g, "");
+
+  if (/^91[6-9]\d{9}$/.test(number)){
+    number = number.slice(2);
   }
-  box.style.display="flex";
-  document.body.classList.add("og-chat-open");
-  if(!document.getElementById("ogMessages").innerHTML) ogStart();
+
+  return /^[6-9]\d{9}$/.test(number) ? number : null;
 }
 
-function ogStart(){
-  ogProduct=""; ogStep=0; ogOrder={waitingForAddress:false};
-  ogBot("नमस्कार! 🙏<br><br><b>ONKAR GRAPHICS & PRINTING</b> मध्ये आपले स्वागत आहे!<br><br>तुम्हाला काय Order करायचे आहे?");
-  ogOptions(["👕 Custom T-Shirt","🎖️ Custom Badge"]);
+/* ===== MOBILE MENU ===== */
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+function closeMenu(){
+  mainNav.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
 }
 
-function ogBot(t){
-  const d=document.createElement("div"); d.className="og-msg og-bot"; d.innerHTML=t;
-  document.getElementById("ogMessages").appendChild(d); ogScroll();
-}
-function ogUser(t){
-  const d=document.createElement("div"); d.className="og-msg og-user"; d.textContent=t;
-  document.getElementById("ogMessages").appendChild(d); ogScroll();
-}
-function ogScroll(){
-  const m=document.getElementById("ogMessages"); m.scrollTop=m.scrollHeight;
-}
-function ogOptions(arr){
-  const box=document.getElementById("ogOptions"); box.innerHTML="";
-  arr.forEach(x=>{
-    const b=document.createElement("button"); b.className="og-option"; b.textContent=x;
-    b.onclick=()=>{ogUser(x); box.innerHTML=""; ogHandle(x);};
-    box.appendChild(b);
-  });
-}
-function ogHandle(x){
-  if(x.includes("T-Shirt")){ogProduct="T-Shirt";ogQuestions=OG_TSHIRT;ogStep=0;ogAsk();}
-  else if(x.includes("Badge")){ogProduct="Badge";ogQuestions=OG_BADGE;ogStep=0;ogAsk();}
-  else ogSave(x);
-}
-function ogAsk(){
-  const q=ogQuestions[ogStep];
-  ogBot(q[0]);
-  if(Array.isArray(q[1])) ogOptions(q[1]);
-}
-function ogSendAnswer(){
-  const input=document.getElementById("ogInput"), a=input.value.trim();
-  if(!a)return;
-  input.value=""; ogUser(a); ogSave(a);
-}
-function ogSave(a){
-  ogOrder[ogStep]=a; ogStep++;
-  if(ogStep<ogQuestions.length) setTimeout(ogAsk,220);
-  else if(ogProduct==="Badge" && ogOrder[8]==="Delivery") ogAskDelivery();
-  else if(ogProduct==="T-Shirt" && ogOrder[7]==="Delivery") ogAskDelivery();
-  else ogFinish();
-}
-function ogAskDelivery(){
-  ogOrder.deliveryAsked=true;
-  ogOrder.waitingForAddress=true;
-  ogBot("🚚 Delivery साठी पूर्ण Address + Pincode एकाच message मध्ये पाठवा.");
-}
-function ogFinishDelivery(a){
-  ogOrder.address=a;
-  ogOrder.waitingForAddress=false;
-  ogFinish();
-}
-
-function ogSendAnswer(){
-  const input=document.getElementById("ogInput");
-  const a=input.value.trim();
-  if(!a)return;
-  input.value="";
-  ogUser(a);
-
-  // Address is the final answer; don't ask for it again.
-  if(ogOrder.waitingForAddress){
-    ogFinishDelivery(a);
-    return;
-  }
-  ogSave(a);
-}
-
-function ogFinish(){
-
-  let s=ogProduct==="T-Shirt"
-    ? `<b>👕 T-Shirt Order Summary</b><br><br>
-       🎨 Design/Text: ${ogSafe(ogOrder[0])}<br>🎨 Colour: ${ogSafe(ogOrder[1])}<br>
-       📏 Size: ${ogSafe(ogOrder[2])}<br>🔢 Quantity: ${ogSafe(ogOrder[3])}<br>
-       🖼️ Design Available: ${ogSafe(ogOrder[4])}<br>👤 Name: ${ogSafe(ogOrder[5])}<br>
-       📱 Mobile: ${ogSafe(ogOrder[6])}<br>🚚 ${ogSafe(ogOrder[7])}`
-    : `<b>🎖️ Badge Order Summary</b><br><br>
-       📝 Badge Name: ${ogSafe(ogOrder[0])}<br>📏 Badge Size: ${ogSafe(ogOrder[1])}<br>
-       🪔 Murti Size: ${ogSafe(ogOrder[2])}<br>📿 Chain/Rudraksh: ${ogSafe(ogOrder[3])}<br>
-       ⬛ Background: ${ogSafe(ogOrder[4])}<br>🔢 Quantity: ${ogSafe(ogOrder[5])}<br>
-       👤 Name: ${ogSafe(ogOrder[6])}<br>📱 Mobile: ${ogSafe(ogOrder[7])}<br>🚚 ${ogSafe(ogOrder[8])}`;
-
-  if(ogOrder.address) s += `<br>📍 Address: ${ogSafe(ogOrder.address)}`;
-  ogBot("✅ <b>तुमची Order Details तयार आहेत!</b><br><br>"+s+"<br><br>Order WhatsApp वर पाठवण्यासाठी खालील button दाबा 👇");
-  ogOptions(["📲 Send Order on WhatsApp","🔄 New Order"]);
-  const ob=document.getElementById("ogOptions").children;
-  ob[0].onclick=ogSendWA;
-  ob[1].onclick=ogNewOrder;
-}
-function ogSafe(v){return String(v||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));}
-function ogSendWA(){
-  let lines=ogProduct==="T-Shirt"
-    ? ["👕 CUSTOM T-SHIRT ORDER","",`🎨 Design/Text: ${ogOrder[0]}`,`🎨 Colour: ${ogOrder[1]}`,`📏 Size: ${ogOrder[2]}`,`🔢 Quantity: ${ogOrder[3]}`,`🖼️ Design Available: ${ogOrder[4]}`,`👤 Name: ${ogOrder[5]}`,`📱 Mobile: ${ogOrder[6]}`,`🚚 Delivery/Pickup: ${ogOrder[7]}`]
-    : ["🎖️ CUSTOM BADGE ORDER","",`📝 Badge Name: ${ogOrder[0]}`,`📏 Badge Size: ${ogOrder[1]}`,`🪔 Murti Size: ${ogOrder[2]}`,`📿 Chain/Rudraksh: ${ogOrder[3]}`,`⬛ Background: ${ogOrder[4]}`,`🔢 Quantity: ${ogOrder[5]}`,`👤 Name: ${ogOrder[6]}`,`📱 Mobile: ${ogOrder[7]}`,`🚚 Delivery/Pickup: ${ogOrder[8]}`];
-  if(ogOrder.address) lines.push(`📍 Delivery Address: ${ogOrder.address}`);
-  window.open("https://wa.me/"+OG_WA+"?text="+encodeURIComponent(lines.join("\n")),"_blank");
-}
-function ogNewOrder(){
-  document.getElementById("ogMessages").innerHTML="";
-  document.getElementById("ogOptions").innerHTML="";
-  document.body.classList.add("og-chat-open");
-  document.getElementById("ogChatBox").style.display="flex";
-  ogStart();
-}
-document.addEventListener("keydown",e=>{
-  if(e.key==="Enter" && document.activeElement.id==="ogInput") ogSendAnswer();
+menuToggle.addEventListener("click", () => {
+  const open = mainNav.classList.toggle("is-open");
+  menuToggle.setAttribute("aria-expanded", String(open));
 });
-</script>
 
-<!-- WHATSAPP ENQUIRY SCRIPT -->
+mainNav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
 
-<script>
+/* ===== PRODUCT IMAGE FALLBACK ===== */
+const badgeImage = document.getElementById("badgeImage");
 
-function sendEnquiry(event){
+function showBadgeFallback(){
+  badgeImage.hidden = true;
+  badgeImage.style.display = "none";
+  document.getElementById("badgeFallback").hidden = false;
+}
 
+badgeImage.addEventListener("error", showBadgeFallback);
+
+if (badgeImage.complete && badgeImage.naturalWidth === 0){
+  showBadgeFallback();
+}
+
+/* ===== SERVICE PREFILL ===== */
+document.querySelectorAll("[data-service]").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("service").value = link.dataset.service;
+  });
+});
+
+/* ===== ENQUIRY FORM ===== */
+const enquiryForm = document.getElementById("enquiryForm");
+const customerPhone = document.getElementById("customerPhone");
+const customerName = document.getElementById("customerName");
+const requiredDate = document.getElementById("requiredDate");
+const formStatus = document.getElementById("formStatus");
+
+const today = new Date();
+const localToday = [
+  today.getFullYear(),
+  String(today.getMonth() + 1).padStart(2, "0"),
+  String(today.getDate()).padStart(2, "0")
+].join("-");
+
+requiredDate.min = localToday;
+
+customerPhone.addEventListener("input", () => {
+  customerPhone.setCustomValidity("");
+});
+
+customerName.addEventListener("input", () => {
+  customerName.setCustomValidity("");
+});
+
+enquiryForm.addEventListener("submit", event => {
   event.preventDefault();
 
-  const name =
-    document.getElementById("name").value;
+  const name = customerName.value.trim();
+  const phone = normalizePhone(customerPhone.value);
 
-  const phone =
-    document.getElementById("phone").value;
+  if (!name){
+    customerName.setCustomValidity("Please enter your name.");
+    customerName.reportValidity();
+    return;
+  }
 
-  const service =
-    document.getElementById("service").value;
+  if (!phone){
+    customerPhone.setCustomValidity("Please enter a valid 10-digit Indian mobile number.");
+    customerPhone.reportValidity();
+    return;
+  }
 
-  const quantity =
-    document.getElementById("quantity").value;
+  if (!enquiryForm.reportValidity()) return;
 
-  const message =
-    document.getElementById("message").value;
+  const service = document.getElementById("service").value;
+  const quantity = document.getElementById("quantity").value;
+  const size = document.getElementById("size").value.trim();
+  const requirement = document.getElementById("requirement").value.trim();
 
+  const message = [
+    "Hello Onkar Graphics & Printing 👋",
+    "",
+    "I would like to request a quotation.",
+    "",
+    "Name: " + name,
+    "Mobile: " + phone,
+    "Service: " + service,
+    "Quantity: " + (quantity || "Not specified"),
+    "Size / Dimensions: " + (size || "Not specified"),
+    "Preferred Required Date: " + (requiredDate.value || "Not specified"),
+    "",
+    "Requirement:",
+    requirement || "Please contact me to discuss.",
+    "",
+    "Please confirm pricing, availability and timing. Thank you."
+  ].join("\n");
 
-  const whatsappMessage =
-`Hello Onkar Graphics & Printing 👋
+  const url = whatsappUrl(message);
 
-I would like to enquire about your services.
+  // Keep a manual link available if a browser blocks the new tab.
+  const fallback = document.createElement("a");
+  fallback.href = url;
+  fallback.target = "_blank";
+  fallback.rel = "noopener noreferrer";
+  fallback.textContent = "Open WhatsApp";
 
-Name: ${name}
-Mobile: ${phone}
-Service: ${service}
-Quantity: ${quantity || "Not specified"}
+  formStatus.replaceChildren(
+    document.createTextNode("Message prepared. If WhatsApp did not open, "),
+    fallback,
+    document.createTextNode(". Press Send in WhatsApp to submit your enquiry.")
+  );
 
-Requirement:
-${message || "Not specified"}
+  window.open(url, "_blank", "noopener,noreferrer");
+});
 
-Thank you.`;
+/* ===== GUIDED ORDER ASSISTANT ===== */
+/* This is a rule-based assistant, not an AI service or order backend. */
 
+const PRODUCTS = {
+  "T-Shirt": [
+    {
+      label:"Design / Text",
+      question:"👕 T-Shirt वर काय Design / Text हवं आहे?"
+    },
+    {
+      label:"Colour",
+      question:"🎨 T-Shirt Colour कोणता हवा?"
+    },
+    {
+      label:"Size",
+      question:"📏 T-Shirt Size कोणता?",
+      choices:["S","M","L","XL","XXL","Other"]
+    },
+    {
+      label:"Quantity",
+      question:"🔢 किती Pieces हवेत?",
+      type:"quantity"
+    },
+    {
+      label:"Design Available",
+      question:"🖼️ तुमच्याकडे Design आहे का?",
+      choices:["Yes","No"]
+    },
+    {
+      label:"Name",
+      question:"👤 तुमचं नाव काय?"
+    },
+    {
+      label:"Mobile",
+      question:"📱 तुमचा 10 अंकी Mobile Number?",
+      type:"phone"
+    },
+    {
+      label:"Delivery / Pickup",
+      question:"🚚 Delivery की Pickup? उपलब्धता आमची टीम confirm करेल.",
+      choices:["Delivery","Pickup"]
+    }
+  ],
 
-  const url =
-    "https://wa.me/919637822996?text=" +
-    encodeURIComponent(whatsappMessage);
+  "Badge": [
+    {
+      label:"Badge Name",
+      question:"🎖️ Badge वर नाव (मराठीत) काय हवं आहे?"
+    },
+    {
+      label:"Badge Size",
+      question:"📏 Badge Size किती? Unit सुद्धा लिहा."
+    },
+    {
+      label:"Murti Size",
+      question:"🪔 मूर्ती Size किती? Unit सुद्धा लिहा."
+    },
+    {
+      label:"Chain / Rudraksh",
+      question:"📿 Chain की Rudraksh?",
+      choices:["Chain","Rudraksh"]
+    },
+    {
+      label:"Background",
+      question:"⬛ Background — Black की White?",
+      choices:["Black","White"]
+    },
+    {
+      label:"Quantity",
+      question:"🔢 किती Badges हवेत?",
+      type:"quantity"
+    },
+    {
+      label:"Name",
+      question:"👤 तुमचं नाव काय?"
+    },
+    {
+      label:"Mobile",
+      question:"📱 तुमचा 10 अंकी Mobile Number?",
+      type:"phone"
+    },
+    {
+      label:"Delivery / Pickup",
+      question:"🚚 Delivery की Pickup? उपलब्धता आमची टीम confirm करेल.",
+      choices:["Delivery","Pickup"]
+    }
+  ]
+};
 
+const chatBox = document.getElementById("chatBox");
+const chatLauncher = document.getElementById("chatLauncher");
+const chatClose = document.getElementById("chatClose");
+const chatMessages = document.getElementById("chatMessages");
+const chatOptions = document.getElementById("chatOptions");
+const chatInput = document.getElementById("chatInput");
+const chatSend = document.getElementById("chatSend");
 
-  window.open(url, "_blank");
+let chatStarted = false;
+let previousFocus = null;
 
+let order = {
+  stage:"product",
+  product:"",
+  step:0,
+  answers:[],
+  address:""
+};
+
+function openChat(){
+  if (!chatBox.hidden) return;
+
+  previousFocus = document.activeElement;
+  closeMenu();
+  chatBox.hidden = false;
+  document.body.classList.add("chat-open");
+  chatLauncher.setAttribute("aria-expanded","true");
+
+  if (!chatStarted){
+    chatStarted = true;
+    startNewOrder();
+  }
+
+  chatClose.focus();
 }
 
-</script>
+function closeChat(){
+  chatBox.hidden = true;
+  document.body.classList.remove("chat-open");
+  chatLauncher.setAttribute("aria-expanded","false");
 
+  if (previousFocus && previousFocus.isConnected){
+    previousFocus.focus();
+  } else {
+    chatLauncher.focus();
+  }
+}
+
+chatLauncher.addEventListener("click", openChat);
+chatClose.addEventListener("click", closeChat);
+
+function addMessage(text, user = false){
+  const bubble = document.createElement("div");
+  bubble.className = "chat-message " + (user ? "user" : "bot");
+
+  // Render all answers as plain text.
+  bubble.textContent = text;
+  chatMessages.appendChild(bubble);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function setOptions(items){
+  chatOptions.replaceChildren();
+
+  items.forEach(item => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "chat-option";
+    button.textContent = item.label;
+    button.addEventListener("click", item.action);
+    chatOptions.appendChild(button);
+  });
+}
+
+function setInput(enabled, placeholder = "Type your answer..."){
+  chatInput.disabled = !enabled;
+  chatSend.disabled = !enabled;
+  chatInput.value = "";
+  chatInput.placeholder = placeholder;
+  chatInput.inputMode = "text";
+  chatInput.maxLength = 1000;
+}
+
+function startNewOrder(){
+  order = {
+    stage:"product",
+    product:"",
+    step:0,
+    answers:[],
+    address:""
+  };
+
+  chatMessages.replaceChildren();
+  setInput(false, "Choose a product above");
+
+  addMessage(
+    "नमस्कार! 🙏\n" +
+    "ONKAR GRAPHICS & PRINTING मध्ये आपले स्वागत आहे!\n\n" +
+    "तुम्हाला काय तयार करायचे आहे?\n\n" +
+    "ही guided enquiry आहे. किंमत, उपलब्धता आणि Order confirmation " +
+    "आमची टीम WhatsApp वर करेल."
+  );
+
+  setOptions([
+    {label:"👕 Custom T-Shirt", action:() => chooseProduct("T-Shirt")},
+    {label:"🎖️ Custom Badge", action:() => chooseProduct("Badge")}
+  ]);
+}
+
+function chooseProduct(product){
+  if (order.stage !== "product" || !PRODUCTS[product]) return;
+
+  order.product = product;
+  order.stage = "questions";
+  addMessage(product, true);
+  askQuestion();
+}
+
+function askQuestion(){
+  const question = PRODUCTS[order.product][order.step];
+
+  addMessage(question.question);
+  setInput(true);
+
+  if (question.type === "phone"){
+    chatInput.inputMode = "tel";
+    chatInput.maxLength = 20;
+  } else if (question.type === "quantity"){
+    chatInput.inputMode = "numeric";
+    chatInput.maxLength = 8;
+  }
+
+  setOptions(
+    (question.choices || []).map(choice => ({
+      label:choice,
+      action:() => acceptAnswer(choice)
+    }))
+  );
+}
+
+function acceptAnswer(value){
+  let answer = value.trim();
+  if (!answer) return;
+
+  if (order.stage === "address"){
+    if (answer.length < 12){
+      addMessage("कृपया पूर्ण Delivery Address लिहा.");
+      return;
+    }
+
+    if (!/\b[1-9]\d{5}\b/.test(answer)){
+      addMessage("कृपया Address सोबत योग्य 6 अंकी Pincode लिहा.");
+      return;
+    }
+
+    addMessage(answer, true);
+    order.address = answer;
+    finishOrder();
+    return;
+  }
+
+  if (order.stage !== "questions") return;
+
+  const questions = PRODUCTS[order.product];
+  const question = questions[order.step];
+
+  if (question.choices){
+    const match = question.choices.find(
+      choice => choice.toLowerCase() === answer.toLowerCase()
+    );
+
+    if (!match){
+      addMessage("कृपया दिलेल्या पर्यायांपैकी एक निवडा.");
+      return;
+    }
+
+    answer = match;
+  }
+
+  if (question.type === "quantity" && !/^[1-9]\d{0,7}$/.test(answer)){
+    addMessage("कृपया Quantity पूर्ण संख्येत लिहा. उदाहरण: 10");
+    return;
+  }
+
+  if (question.type === "phone"){
+    const validPhone = normalizePhone(answer);
+
+    if (!validPhone){
+      addMessage("कृपया योग्य 10 अंकी Indian Mobile Number लिहा.");
+      return;
+    }
+
+    answer = validPhone;
+  }
+
+  addMessage(answer, true);
+  order.answers.push(answer);
+  order.step += 1;
+
+  chatInput.value = "";
+  chatOptions.replaceChildren();
+
+  if (order.step < questions.length){
+    askQuestion();
+    return;
+  }
+
+  if (order.answers[questions.length - 1] === "Delivery"){
+    order.stage = "address";
+    setInput(true, "Full address and 6-digit PIN code");
+    addMessage("🚚 Delivery साठी पूर्ण Address + Pincode लिहा.");
+  } else {
+    finishOrder();
+  }
+}
+
+function orderSummary(){
+  const questions = PRODUCTS[order.product];
+
+  const lines = [
+    "ONKAR GRAPHICS & PRINTING",
+    order.product.toUpperCase() + " ENQUIRY",
+    "",
+    ...questions.map(
+      (question,index) => question.label + ": " + order.answers[index]
+    )
+  ];
+
+  if (order.address){
+    lines.push("Delivery Address: " + order.address);
+  }
+
+  lines.push(
+    "",
+    "Please confirm pricing, availability and delivery/pickup timing."
+  );
+
+  return lines.join("\n");
+}
+
+function finishOrder(){
+  order.stage = "complete";
+  setInput(false, "Send your enquiry or start again");
+
+  addMessage(
+    "✅ तुमची Enquiry तयार आहे!\n\n" +
+    orderSummary() +
+    "\n\nखालील button दाबून WhatsApp उघडा आणि Send दाबा.\n" +
+    "Design file असल्यास WhatsApp chat मध्ये attach करा.\n\n" +
+    "Order अजून confirm झालेली नाही. आमची टीम पुढील माहिती देईल."
+  );
+
+  setOptions([
+    {
+      label:"📲 Open Enquiry in WhatsApp",
+      action:() => {
+        if (order.stage !== "complete") return;
+        window.open(
+          whatsappUrl(orderSummary()),
+          "_blank",
+          "noopener,noreferrer"
+        );
+      }
+    },
+    {
+      label:"🔄 Start Again / Change Details",
+      action:startNewOrder
+    }
+  ]);
+}
+
+document.getElementById("chatInputForm").addEventListener("submit", event => {
+  event.preventDefault();
+  if (!chatInput.disabled) acceptAnswer(chatInput.value);
+});
+
+document.querySelectorAll("[data-start-order]").forEach(button => {
+  button.addEventListener("click", () => {
+    openChat();
+    startNewOrder();
+    chooseProduct(button.dataset.startOrder);
+  });
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape"){
+    closeMenu();
+    if (!chatBox.hidden) closeChat();
+  }
+});
+</script>
 </body>
 </html>
